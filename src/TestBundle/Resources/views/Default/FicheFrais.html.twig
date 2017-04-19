@@ -1,0 +1,129 @@
+{% extends 'TestBundle::layout.html.twig' %}
+{% block body %}
+    <div class="row" style="margin-left: 0px;margin-right: 0px;margin-top: 20px;">
+        <div class="col-md-offset-3 col-lg-8">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <p style="margin: 0px;">{{ nom }} {{ prenom }}</p>
+                    <h1 style="text-align: center;margin-top: 0px;">Fiche Frais {{ Mois }} {{ Annee }}</h1>
+                </div>
+                <div class="panel-body">
+                    <h1 style="font-size: 20px;text-align: center">Frais Forfait :</h1>
+                    <div class="table-responsive">
+                        <table class="table table-bordered" style="margin: 0px">
+                            <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Quantite</th>
+                                <th>Montant</th>
+                                <th>Validé</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% set total = 0 %}
+                            {% for unefiche in Fiche.getLigneForFais() %}
+                                {% if unefiche.getValide() == true %}
+                                    <tr class="success">
+                                {% else %}
+                                    <tr class="alert-danger">
+                                {% endif %}
+                                <td>{{ unefiche.getDate().format('d/m/Y') }}</td>
+                                <td>{{ unefiche.getFraisForfais().getid() }}</td>
+                                <td>{{ unefiche.getQuantite() }}</td>
+                                <td>{{ unefiche.getMontant() }}€</td>
+                                <td>{% if unefiche.getValide() == true %}
+                                        Oui
+                                        {% set total = unefiche.getMontant()+total %}
+                                    {% else %}
+                                        Non
+                                    {% endif %}
+                                </td>
+
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Total Frais Forfait :</th>
+                                    <th>{{ total }}€</th>
+                                </tr>
+                                </thead>
+                            </table>
+                    </div>
+                    <!-- Tableau Frais Hor Forfait -->
+                    <h1 style="font-size: 20px;text-align: center">Frais Hor Forfait</h1>
+                    <div class="table-responsive">
+                        <table class="table table-bordered" style="margin: 0px">
+                            <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Libelle</th>
+                                <th>Montant</th>
+                                <th>Validé</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% set total2 = 0 %}
+                            {% for unefiche in Fiche.getLigneHorForFait() %}
+                                {% if unefiche.getValide() == true %}
+                                    <tr class="success">
+                                {% else %}
+                                    <tr class="alert-danger">
+                                {% endif %}
+
+                                <td>{{ unefiche.getDate().format('d/m/Y') }}</td>
+                                <td>{{ unefiche.getLibelle() }}</td>
+                                <td>{{ unefiche.getMontant() }}€</td>
+                                <td>{% if unefiche.getValide() == true %}
+                                        Oui
+                                        {% set total2 = unefiche.getMontant()+total2 %}
+                                    {% else %}
+                                        Non
+                                    {% endif %}
+                                </td>
+
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Total Frais Hor Forfait :</th>
+                                    <th>{{ total2 }}€</th>
+                                </tr>
+                                </thead>
+                            </table>
+                    </div>
+
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Total Frais :</th>
+                            <th>{{ Fiche.getMontantValide() }}€</th>
+                        </tr>
+                        </thead>
+                    </table>
+
+                    <div class="container">
+                        <div class="panel">
+                            {% set i = 1 %}
+                            {% for unJusti in Fiche.getJustificatif() %}
+                                <a href="{{ asset('Uplaod/Jusificatif/' ~unJusti.getId()~ '/' ~ unJusti.getURL()) }}" target="_blank">Justificatif {{ i }}</a>
+                                {% set i = i+1 %}
+                            {% endfor %}
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+{% endblock %}

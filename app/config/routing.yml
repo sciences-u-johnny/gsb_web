@@ -1,0 +1,9 @@
+test:
+    resource: "@TestBundle/Resources/config/routing.yml"
+    prefix:   /
+logout:
+    path: /logout
+login_check:
+    path:   /login_check
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

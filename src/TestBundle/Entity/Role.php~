@@ -1,0 +1,61 @@
+<?php
+
+namespace TestBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Role
+ *
+ * @ORM\Table(name="role")
+ * @ORM\Entity(repositoryClass="TestBundle\Repository\RoleRepository")
+ */
+class Role
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="id", type="string")
+     * @ORM\Id
+     */
+    private $id;
+    /**
+     * @ORM\OneToMany(targetEntity="TestBundle\Entity\Visiteur",mappedBy="role")
+     */
+    private $visiteur;
+
+
+
+
+    /**
+     * Set id
+     *
+     * @param string $id
+     *
+     * @return Role
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
+     * Get id
+     *
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->ficheFrai = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}

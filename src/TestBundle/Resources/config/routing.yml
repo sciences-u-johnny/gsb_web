@@ -1,0 +1,55 @@
+user_logout:
+    path:     /logout
+test_login:
+    path: /
+    defaults: { _controller: TestBundle:Default:login }
+
+test_homepage:
+    path:     /acceuil
+    defaults: { _controller: TestBundle:Default:Acceuil }
+
+##########################---ADMIN---#######################
+test_addVisiteur:
+    path: /admin/add
+    defaults: {_controller: TestBundle:Default:addVisiteur}
+test_removeVisiteur:
+    path: /admin/remove
+    defaults: {_controller: TestBundle:Default:removeVisiteur}
+##########################---FIN ADMIN---#####################
+
+##########################---UTILISATEUR---#######################
+test_renseignerfichefrais:
+    path: /user/renseigner
+    defaults: {_controller: TestBundle:Default:RenseignerFicheFrais}
+test_consulterfichefrais:
+    path: /user/consulter
+    defaults: {_controller: TestBundle:Default:Consulter}
+##########################---FIN UTILISATEUR---#######################
+
+##########################---COMPTABLE---#######################
+test_consulterfichefraisC:
+    path: /comptable/consulter
+    defaults: {_controller: TestBundle:Default:ConsulterC}
+test_validerfichefrais:
+    path: /comptable/valider/{id_fiche}/{id_visiteur}
+    defaults: {_controller: TestBundle:Default:Valider}
+# A VOIR
+test_remboursefichefrais:
+    path: /comptable/rembourse/{id}/{Annee}/{Mois}
+    defaults: {_controller: TestBundle:Default:Rembourse}
+##########################---FIN COMPTABLE---#######################
+
+##########################---ANDROID---------#######################
+api_connect:
+    path:     /api/connect
+    defaults: { _controller: TestBundle:Post:connect}
+    methods: [GET]
+api_listefiche:
+    path:     /api/listefiche
+    defaults: { _controller: TestBundle:Post:listefiche}
+    methods: [GET]
+api_infofiche:
+    path: /api/info
+    defaults: { _controller: TestBundle:Post:infofiche}
+    methods: [GET]
+#########################---FIN ANDROID------#######################

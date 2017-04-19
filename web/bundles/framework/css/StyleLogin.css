@@ -1,0 +1,19 @@
+.panel{
+    margin-top: 10%;
+    border-color: white;
+    text-align: center;
+}
+#image{
+    text-align: center;
+}
+#username,#password{
+    text-align: center;
+
+}
+body{
+    background-color: #3c3c3c;
+}
+#login{
+
+
+}

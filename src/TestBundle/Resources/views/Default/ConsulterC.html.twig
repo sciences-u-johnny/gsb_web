@@ -1,0 +1,111 @@
+{% extends 'TestBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+
+
+
+<link rel="stylesheet" href="{{ asset('bundles/framework/bootstrap/css/bootstrap.min.css') }}">
+
+<link rel="stylesheet" href="{{ asset('bundles/framework/theme/css/custom-theme/jquery-ui-1.10.0.custom.css') }}">
+<link rel="stylesheet" href="{{ asset('bundles/framework/theme/assets/css/font-awesome.min.css') }}">
+
+<link rel="stylesheet" href="{{asset('bundles/framework/css/ConsulerUser.css')  }}">
+
+<script src="{{asset('bundles/framework/theme/assets/js/jquery-1.9.0.min.js')  }}"></script>
+<script src="{{asset('bundles/framework/theme/assets/js/bootstrap.min.js')  }}"></script>
+<script src="{{asset('bundles/framework/theme/assets/js/jquery-ui-1.10.0.custom.min.js')  }}"></script>
+
+<script src="{{asset('bundles/framework/theme/assets/js/google-code-prettify/prettify.js')  }}"></script>
+
+<script src="{{ asset('bundles/framework/bootstrap/js/jquery.easing.js')}}"></script>
+
+{% endblock stylesheets %}
+{% block body %}
+
+    <div class="row" style="margin-left: 0px;margin-right: 0px;margin-top: 40px;" >
+        <div class="col-md-offset-3 col-lg-8">
+            {% form_theme form 'bootstrap_3_layout.html.twig' %}
+            <p style="text-align: center;background-color: #f2dede;color: #b94a48;">{{ erreur }}</p>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{ form_start(form) }}
+                    <div class="row" style="margin: auto">
+                        <div class="col-md-2">
+                            {{ form_widget(form.nom , {'attr': {'placeholder': 'Nom'}}) }}
+                        </div>
+                        <div class="col-md-2">
+                            {{ form_widget(form.prenom , {'attr': {'placeholder': 'Prénom'}}) }}
+                        </div>
+                        <div class="col-md-2">
+                            {{ form_widget(form.mois) }}
+                        </div>
+                        <div class="col-md-2">
+                            {{ form_widget(form.annee) }}
+                        </div>
+                        <div class="col-md-2">
+                            {{ form_widget(form.etat) }}
+                        </div>
+                        <div class="col-md-2" style="text-align: right;">
+                            {{ form_widget(form.rechercher, {'attr': {'class': 'btn btn-success'}}) }}
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+
+                </div>
+                <div class="panel-body">
+
+                    {% if (resultat == null and Recherche != false) %}
+                        <h1 style="text-align: center;background-color: #f2dede;color: #b94a48;">Aucun résultat</h1>
+                    {% else %}
+                        <div class="container" style="width: 100%;">
+                            <table class="table table-condensed" style="width: 100%;">
+                                <thead>
+                                <tr>
+                                    <th>Utilisateur</th>
+                                    <th>Date</th>
+                                    <th>Etat</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for unres in resultat %}
+                                    <tr>
+                                        <td>{{ unres.getvisiteur().getNom() }} {{ unres.getvisiteur().getPrenom() }}</td>
+                                        <td>{{ unres.getMois().format('m-Y') }}</td>
+                                        <td>{{ unres.getEtat().getid() }}</td>
+                                        <td>{% if unres.getEtat().getid() == "Cloturé" %}
+                                                <form name="voir" method="post" style="display: inline">
+                                                    <input type="hidden" id="id" name="id" value="{{ unres.getid() }}">
+                                                    <input type="hidden" id="mode" name="mode" value="1">
+                                                    <input type="hidden" id="id_visiteur" name="id_visiteur" value="{{ unres.getvisiteur().getid() }}">
+                                                    <input type="submit" class="btn btn-success" value="Valider" >
+                                                </form>
+                                            {% endif %}
+                                                <form name="voir" method="post" style="display: inline" >
+                                                    <input type="hidden" id="id" name="id" value="{{ unres.getid() }}">
+                                                    <input type="hidden" id="mode" name="mode" value="2">
+                                                    <input type="hidden" id="id_visiteur" name="id_visiteur" value="{{ unres.getvisiteur().getid() }}">
+                                                    <input type="submit" class="btn btn-info" value="Consulter" >
+                                                </form>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    {% endif %}
+
+
+                </div>
+
+            </div>
+            {{ form(form) }}
+
+        </div>
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="{{ asset('bundles/framework/bootstrap/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{asset('bundles/framework/bootstrap/js/jquery.js')  }}">
+<link rel="stylesheet" href="{{asset('bundles/framework/bootstrap/js/bootstrap.min.js')  }}">
+<link rel="stylesheet" href="{{asset('bundles/framework/css/StyleLogin.css')  }}">
+
+  {% if error %}
+      <div class="alert alert-danger" style="color: red;font-size: 20px">{{ error.message }}</div>
+  {% endif %}
+
+
+<div class="row" style="margin-left: 0px;margin-right: 0px;">
+    <div class="panel panel-default col-md-offset-4 col-md-4">
+        <div class="panel-body">
+        <div id="Image">
+            <img style="max-width: 100%; height: auto;margin-bottom: 10px" alt="logo" src="{{ asset('bundles/framework/images/logo3.png') }}">
+        </div>
+        <br>
+
+        <form action="{{ path('login_check') }}" method="post">
+            <div id="input" style="text-align: center">
+                <input type="text" id="username" class="form-control" placeholder=" Login ..." name="_username" value="{{ last_username }}" required />
+
+                <br>
+
+
+                <input type="password" class="form-control" placeholder=" Mot de passe ..." id="password" name="_password" required/>
+            </div>
+
+
+                <br/>
+
+                <input type="submit" class="btn btn-primary btn-lg btn-block" id="login" value="Connexion" />
+
+        </form>
+    </div>
+    </div>
+</div>

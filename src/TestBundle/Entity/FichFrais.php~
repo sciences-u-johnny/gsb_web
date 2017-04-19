@@ -1,0 +1,248 @@
+<?php
+
+namespace TestBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * FichFrais
+ *
+ * @ORM\Table(name="fich_frais")
+ * @ORM\Entity(repositoryClass="TestBundle\Repository\FichFraisRepository")
+ */
+class FichFrais
+{
+
+    /**
+     * @var string
+     * @ORM\Id
+     * @ORM\Column(name="Mois", type="string", length=6, unique=true)
+     */
+    private $mois;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="NombreJustificatif", type="integer")
+     */
+    private $nombreJustificatif;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="MontantValide", type="integer")
+     */
+    private $montantValide;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DateModif", type="date")
+     */
+    private $dateModif;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DateCreation", type="datetime")
+     */
+    private $dateCreation;
+
+    /**
+     * @ORM\OneToMany(targetEntity="TestBundle\Entity\Justificatif",mappedBy="fichefrai")
+     */
+    private $justificatif;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="TestBundle\Entity\Visiteur",inversedBy="ficheFrai")
+     */
+    private $visiteur;
+
+
+
+    /**
+     * Set mois
+     *
+     * @param string $mois
+     *
+     * @return FichFrais
+     */
+    public function setMois($mois)
+    {
+        $this->mois = $mois;
+
+        return $this;
+    }
+
+    /**
+     * Get mois
+     *
+     * @return string
+     */
+    public function getMois()
+    {
+        return $this->mois;
+    }
+
+    /**
+     * Set nombreJustificatif
+     *
+     * @param integer $nombreJustificatif
+     *
+     * @return FichFrais
+     */
+    public function setNombreJustificatif($nombreJustificatif)
+    {
+        $this->nombreJustificatif = $nombreJustificatif;
+
+        return $this;
+    }
+
+    /**
+     * Get nombreJustificatif
+     *
+     * @return int
+     */
+    public function getNombreJustificatif()
+    {
+        return $this->nombreJustificatif;
+    }
+
+    /**
+     * Set montantValide
+     *
+     * @param integer $montantValide
+     *
+     * @return FichFrais
+     */
+    public function setMontantValide($montantValide)
+    {
+        $this->montantValide = $montantValide;
+
+        return $this;
+    }
+
+    /**
+     * Get montantValide
+     *
+     * @return int
+     */
+    public function getMontantValide()
+    {
+        return $this->montantValide;
+    }
+
+    /**
+     * Set dateModif
+     *
+     * @param \DateTime $dateModif
+     *
+     * @return FichFrais
+     */
+    public function setDateModif($dateModif)
+    {
+        $this->dateModif = $dateModif;
+
+        return $this;
+    }
+
+    /**
+     * Get dateModif
+     *
+     * @return \DateTime
+     */
+    public function getDateModif()
+    {
+        return $this->dateModif;
+    }
+
+    /**
+     * Set dateCreation
+     *
+     * @param \DateTime $dateCreation
+     *
+     * @return FichFrais
+     */
+    public function setDateCreation($dateCreation)
+    {
+        $this->dateCreation = $dateCreation;
+
+        return $this;
+    }
+
+    /**
+     * Get dateCreation
+     *
+     * @return \DateTime
+     */
+    public function getDateCreation()
+    {
+        return $this->dateCreation;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->justificatif = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add justificatif
+     *
+     * @param \TestBundle\Entity\Justificatif $justificatif
+     *
+     * @return FichFrais
+     */
+    public function addJustificatif(\TestBundle\Entity\Justificatif $justificatif)
+    {
+        $this->justificatif[] = $justificatif;
+
+        return $this;
+    }
+
+
+    /**
+     * Remove justificatif
+     *
+     * @param \TestBundle\Entity\Justificatif $justificatif
+     */
+    public function removeJustificatif(\TestBundle\Entity\Justificatif $justificatif)
+    {
+        $this->justificatif->removeElement($justificatif);
+    }
+
+    /**
+     * Get justificatif
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getJustificatif()
+    {
+        return $this->justificatif;
+    }
+
+    /**
+     * Set visiteur
+     *
+     * @param \TestBundle\Entity\Visiteur $visiteur
+     *
+     * @return FichFrais
+     */
+    public function setVisiteur(\TestBundle\Entity\Visiteur $visiteur = null)
+    {
+        $this->visiteur = $visiteur;
+
+        return $this;
+    }
+
+    /**
+     * Get visiteur
+     *
+     * @return \TestBundle\Entity\Visiteur
+     */
+    public function getVisiteur()
+    {
+        return $this->visiteur;
+    }
+}

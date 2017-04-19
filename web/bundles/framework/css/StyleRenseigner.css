@@ -1,0 +1,16 @@
+.form-control{
+    text-align: right;
+    margin: auto;
+
+}
+.panel-heading{
+    text-align: center;
+}
+.control-label{
+    font-size: 20px;
+    margin: auto;
+}
+.form-group{
+    padding-bottom:  25px;
+    padding-top: 5px;
+}

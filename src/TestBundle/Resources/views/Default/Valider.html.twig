@@ -1,0 +1,188 @@
+{% extends 'TestBundle::layout.html.twig' %}
+{% block stylesheets %}
+
+
+
+<link rel="stylesheet" href="{{ asset('bundles/framework/bootstrap/css/bootstrap.min.css') }}">
+
+<link rel="stylesheet" href="{{ asset('bundles/framework/theme/css/custom-theme/jquery-ui-1.10.0.custom.css') }}">
+<link rel="stylesheet" href="{{ asset('bundles/framework/theme/assets/css/font-awesome.min.css') }}">
+
+<link rel="stylesheet" href="{{asset('bundles/framework/css/StyleRenseigner.css')  }}">
+
+<script src="{{asset('bundles/framework/theme/assets/js/jquery-1.9.0.min.js')  }}"></script>
+<script src="{{asset('bundles/framework/theme/assets/js/bootstrap.min.js')  }}"></script>
+<script src="{{asset('bundles/framework/theme/assets/js/jquery-ui-1.10.0.custom.min.js')  }}"></script>
+
+<script src="{{asset('bundles/framework/theme/assets/js/google-code-prettify/prettify.js')  }}"></script>
+
+<script src="{{ asset('bundles/framework/bootstrap/js/jquery.easing.js')}}"></script>
+
+    <script type="text/javascript">
+
+        function ValideForfait(select) {
+
+            if (select.value == 1)
+            {
+                $('#fiche_frais_LigneForFais_'+select.name+'_valide').attr('checked',true);
+            }else {
+                $('#fiche_frais_LigneForFais_'+select.name+'_valide').attr('checked',false);
+            }
+        }
+        function ValideHorForfait(select) {
+
+            if (select.value == 1)
+            {
+                $('#fiche_frais_LigneHorForFait_'+select.name+'_valide').attr('checked',true);
+            }else {
+                $('#fiche_frais_LigneHorForFait_'+select.name+'_valide').attr('checked',false);
+            }
+        }
+
+
+        jQuery(document).ready(function()  {
+            $('.supH').click(function(event){
+                event.preventDefault(); // évite qu'un # apparaisse dans l'URL
+                val = $(this).attr("name");
+                $('#dialog-confirm2').dialog('open');
+                return false;;
+            });
+
+
+
+            $('#dialog-confirm2').dialog({
+                autoOpen: false,
+                width: 600,
+                buttons: {
+                    "oui": function () {
+                        $(this).dialog("close");
+                        $('#H'+val).remove();
+                        return true;
+                    },
+                    "non": function () {
+                        $(this).dialog("close");
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+
+{% endblock %}
+{% block body %}
+
+    <div id="dialog-confirm2" title="Confirmation de la suppression" style="display:none;">
+        <p>
+            <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+            Etes-vous sûr de vouloir refuser ce frais hor frofait ?
+        </p>
+    </div>
+
+    {% form_theme form1 'bootstrap_3_layout.html.twig' %}
+    <div class="row" style="margin-left: 0px;margin-right: 0px;" >
+        <div class="col-md-offset-3 col-md-8">
+            <div class="panel panel-success" style="margin-top: 10px;">
+                <div class="panel-heading">
+                    <h1 style="text-align: center;font-size: 20px;margin-top: 5px;margin-bottom: 0px">{{ Name }} {{ Prenom }} : Fiche Frais de {{DateMois}} {{DateAnne}} </h1>
+                </div>
+                <div class="panel-body">
+                    {{ form_start(form1) }}
+                    <div class="responsive-table-line" id="tout" style="margin:0px auto;max-width:100%;">
+                        <h1 style="font-size: 20px; text-align: center;">Frais Forfait :</h1>
+                        <table class="table table-bordered table-condensed table-body-center" id="la" >
+                            <thead>
+                            <tr>
+                                <th>Type de Frais</th>
+                                <th>Quantité</th>
+                                <th>Monatant</th>
+                                <th>Date</th>
+                                <th>Valide</th>
+                            </tr>
+                            </thead>
+                            <tbody id="reload">
+                            {% set i = 0 %}
+                            {% for uneligne in Fiche.getLigneForFais() %}
+                                <tr>
+                                    <th scope="row">{{ uneligne.getFraisForfais().getid()}}</th>
+                                    <td>{{ uneligne.getquantite() }}</td>
+                                    <td>{{ uneligne.getMontant() }}€</td>
+                                    <td>{{ uneligne.getdate().format('d/m/Y') }}</td>
+                                    <td><select id="Select_F_{{ i }}" name="{{ i }}"  onchange="ValideForfait(this)">
+                                        {% if uneligne.getValide() == true %}
+
+                                            <option value="1">Oui</option>
+                                            <option value="0">Non</option>
+                                        {% else %}
+                                            <option value="0">Non</option>
+                                            <option value="1">Oui</option>
+                                        {% endif %}</select>
+                                        {{ form_widget(form1.LigneForFais[i],{'attr': {'class ': 'hidden'}}) }}
+                                    </td>
+                                </tr>
+                                {% set i = i+1 %}
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="responsive-table-line" id="tout" style="margin:0px auto;max-width:100%;">
+                        <h1 style="font-size: 20px; text-align: center;">Frais Hor Forfait :</h1>
+                        <table class="table table-bordered table-condensed table-body-center" id="la" >
+                            <thead>
+                            <tr>
+                                <th>Libelle</th>
+                                <th>Montant</th>
+                                <th>Date</th>
+                                <th>Valide</th>
+                            </tr>
+                            </thead>
+                            <tbody id="reload">
+                            {% set i = 0 %}
+                            {% for uneligne in Fiche.getLigneHorForFait() %}
+                                <tr id="H{{ i }}">
+                                    <th scope="row">{{ uneligne.getlibelle()}}</th>
+                                    <td>{{ uneligne.getmontant() }}€</td>
+                                    <td>{{ uneligne.getdate().format('d/m/Y') }}</td>
+                                    <td><select id="Select_F_{{ i }}" name="{{ i }}"  onchange="ValideHorForfait(this)">
+                                            {% if uneligne.getValide() == true %}
+
+                                                <option value="1">Oui</option>
+                                                <option value="0">Non</option>
+                                            {% else %}
+                                                <option value="0">Non</option>
+                                                <option value="1">Oui</option>
+                                            {% endif %}</select>
+                                            {{ form_widget(form1.LigneHorForFait[i],{'attr': {'class ': 'hidden'}}) }}</td>
+                                </tr>
+                                {% set i = i+1 %}
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="container">
+                        <div class="panel">
+                            {% set i = 1 %}
+                            {% for unJusti in Fiche.getJustificatif() %}
+                                <a href="{{ asset('Uplaod/Jusificatif/' ~unJusti.getId()~ '/' ~ unJusti.getURL()) }}" target="_blank">Justificatif {{ i }}</a>
+                                {% set i = i+1 %}
+                            {% endfor %}
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="panel-footer" style="margin: 0px">
+                    <div class="form-group" style="margin: 0px;padding: 0px">
+                        {{ form_widget(form1.Sauvegarder,{'attr' : {'class' : 'hidden'}}) }}
+                        <input class="btn btn-success" value="Valider" type="submit"/>
+                        {{ form_end(form1) }}
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

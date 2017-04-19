@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+        <link rel="stylesheet" href="{{ asset('bundles/framework/bootstrap/css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{asset('bundles/framework/bootstrap/js/jquery.js')  }}">
+        <link rel="stylesheet" href="{{asset('bundles/framework/bootstrap/js/bootstrap.min.js')  }}">
+        <link rel="stylesheet" href="{{asset('bundles/framework/css/StyleNav.css')  }}">
+        <link rel="stylesheet" href="{{ asset('bundles/framework/bootstrap/js/jquery.easing.js')}}">
+    </head>
+    <body>
+       <div class="container" style="z-index: 1000;">
+           <nav class="navbar navbar-inverse navbar-fixed-top">
+               <div class="navbar-collapse collapse sidebar-navbar-collapse">
+                   <ul class="nav navbar-nav">
+                       <img style="max-width: 100%; height: auto;margin-bottom: 50px" alt="logo" src="{{ asset('bundles/framework/images/logo3.png') }}">
+
+
+                               {%  if is_granted('ROLE_UTILISATEUR')%}
+
+                                   <li id="liU"><a style="border-color: transparent" class="btn btn-lg btn-block" href="{{  path('test_renseignerfichefrais') }}">Renseigner Fiche</a></li>
+                                   <li id="liU"><a style="border-color: transparent" class="btn btn-lg btn-block" href="{{ path('test_consulterfichefrais') }}">Consulter</a></li>
+                               {% endif %}
+
+                               {%  if is_granted('ROLE_COMPTABLE')%}
+
+                                   <li id="liU"><a style="border-color: transparent" class="btn btn-lg btn-block" href="{{ path('test_consulterfichefraisC') }}">Consulter </a></li>
+                               {% endif %}
+
+                       {%  if is_granted('ROLE_ADMIN')%}
+                           <li id="liU"><a style="border-color: transparent" class="btn btn-lg btn-block" href="{{ path('test_addVisiteur') }}">Ajouter User</a></li>
+                           <li id="liU"><a style="border-color: transparent" class="btn btn-lg btn-block" href="{{ path('test_removeVisiteur') }}">Supprimer User</a></li>
+                       {% endif %}
+
+                                <li id="liD"><a style="border-color: transparent" class="btn btn-lg " href="{{ path('user_logout') }}">Deconnection</a></li>
+
+                           </ul>
+                              </div>
+                       </nav>
+
+        </div>
+
+
+        {% block body %}{% endblock %}
+
+    </body>
+</html>
