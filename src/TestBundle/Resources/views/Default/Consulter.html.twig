@@ -2,7 +2,7 @@
 
 {% block stylesheets %}
 
-
+<!-- Page qui liste les fiches de l'utilisateur -->
 
 <link rel="stylesheet" href="{{ asset('bundles/framework/bootstrap/css/bootstrap.min.css') }}">
 
@@ -20,6 +20,8 @@
 <script src="{{ asset('bundles/framework/bootstrap/js/jquery.easing.js')}}"></script>
     <script>
         jQuery(document).ready(function()  {
+
+            //Récuperation des information des Ficches :
             var tabEtat = new Array();
             var tabAffichage = new Array();
             var tabMoi = new Array();
@@ -34,7 +36,7 @@
             {% endfor %}
 
 
-
+            //Affichage des Fiche en fonction de la date choisie par l'utilisateur
             $(document).on('change','#ChoixAnnee',function () {
 
                 var v  = $(this).val();
@@ -65,14 +67,7 @@
 {% endblock stylesheets %}
 {% block body %}
 
-
-    <!--Jquery Fenetre Fiche Frais -->
-    <div id="FicheFrais" title="Fiche Frais " style="display:none;">
-        <p>
-
-        </p>
-    </div>
-
+    <!-- Affichage des fiches pour la consultation -->
      <div class="row" style="margin-left: 0px;margin-right: 0px;margin-top: 20px;" >
          <div class="col-md-offset-3 col-lg-8">
 

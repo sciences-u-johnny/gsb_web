@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<!-- Page Permettent l'import de boostrap dans toute les autres pages mais aussi de l'affichage de la barre de menu  -->
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
@@ -19,7 +20,7 @@
                    <ul class="nav navbar-nav">
                        <img style="max-width: 100%; height: auto;margin-bottom: 50px" alt="logo" src="{{ asset('bundles/framework/images/logo3.png') }}">
 
-
+                       <!-- On gère l'affichage de la barre de menu en fonction de quelle utilisateur se connecte -->
                                {%  if is_granted('ROLE_UTILISATEUR')%}
 
                                    <li id="liU"><a style="border-color: transparent" class="btn btn-lg btn-block" href="{{  path('test_renseignerfichefrais') }}">Renseigner Fiche</a></li>

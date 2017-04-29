@@ -1,7 +1,7 @@
 {% extends 'TestBundle::layout.html.twig' %}
 
 {% block stylesheets %}
-
+<!-- Page Listant les fiches en fonction de la recherche du comptable -->
 
 
 <link rel="stylesheet" href="{{ asset('bundles/framework/bootstrap/css/bootstrap.min.css') }}">
@@ -21,7 +21,7 @@
 
 {% endblock stylesheets %}
 {% block body %}
-
+    <!-- Création du formulaire de recherche -->
     <div class="row" style="margin-left: 0px;margin-right: 0px;margin-top: 40px;" >
         <div class="col-md-offset-3 col-lg-8">
             {% form_theme form 'bootstrap_3_layout.html.twig' %}
@@ -53,7 +53,7 @@
 
                 </div>
                 <div class="panel-body">
-
+<!-- Affichage du résultat de la recherche -->
                     {% if (resultat == null and Recherche != false) %}
                         <h1 style="text-align: center;background-color: #f2dede;color: #b94a48;">Aucun résultat</h1>
                     {% else %}

@@ -2,7 +2,7 @@
 {% set i = 1 %}
 {% block stylesheets %}
 
-
+<!-- ¨Page pour renseigner les frais forfait et hors forfait -->
 
     <link rel="stylesheet" href="{{ asset('bundles/framework/bootstrap/css/bootstrap.min.css') }}">
 
@@ -53,6 +53,7 @@
 
             var val;
 
+            //Vérification que tous les champs son bien remplie lorsque l'utilisateur click sur sauvegarder
             $('#fiche_frais_Sauvegarder').click(function (event) {
 
                 $('.erreur').remove();
@@ -66,7 +67,7 @@
                 var bon2 = true;
 
 
-
+                //Vérification ligne hors forfait
                 for (var i=0;i<LigneHCount;i++){
 
                     $nb = LigneHTab[i];
@@ -132,6 +133,7 @@
                         $('#TitreH'+$nb).css("color","9d9d9d");
                     }
                 }
+                //Vérification ligne forfait
                 for (var i=0;i<LigneFCount;i++){
                     $nb = LigneFTab[i];
 
@@ -212,6 +214,7 @@
 
 
             });
+
 
             function VeriNombre(source)
             {
@@ -480,7 +483,7 @@
 {% block title %}Ajout Fiche Frais{% endblock %}
 {% block body %}
 
-    <!--Jquery Fenetre Dialog -->
+    <!--Jquery Fenêtre Dialogue Suppression frais forfait -->
     <div id="dialog-confirm" title="Confirmation de la suppression" style="display:none;">
         <p>
             <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
@@ -488,14 +491,15 @@
         </p>
     </div>
 
-    <!--Jquery Fenetre Dialog -->
+    <!--Jquery Fenêtre Dialogue Suppression frais hors forfait -->
     <div id="dialog-confirm2" title="Confirmation de la suppression" style="display:none;">
         <p>
             <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
             Etes-vous sûr de vouloir supprimer cet élément ?
         </p>
     </div>
-    <!--Jquery Fenetre Dialog -->
+
+    <!-- Jquery Fenêtre Dialogue Suppression justificatif -->
     <div id="dialog-confirm3" title="Confirmation de la suppression" style="display:none;">
         <p>
             <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
@@ -520,6 +524,7 @@
 
                         </div>
 
+                        <!-- Affichage des frais forfaits déjà sauvegarder plus affichage du formulaire pour en sauvegarder des nouveaux -->
                         <div class="panel-body" style="max-height: 230px;min-height: 230px; overflow-y:scroll;">
                             <div id="tout" date-prototype="{{ form_widget(form1.LigneForFais.vars.prototype.date)|e('html_attr')}}" quantite-prototype="{{ form_widget(form1.LigneForFais.vars.prototype.quantite)|e('html_attr') }}" Fraisforfait-prototype="{{ form_widget(form1.LigneForFais.vars.prototype.FraisForfais)|e('html_attr') }}">
                                 {% for UneLigne in form1.LigneForFais %}
@@ -556,6 +561,7 @@
                     </div>
 
 
+                    <!-- Affichage des frais hors forfaits déjà sauvegarder plus affichage du formulaire pour en sauvegarder des nouveaux -->
                     <div class="panel panel-default" style="color: #9d9d9d;background-color: #3c3c3c">
                         <div class="panel-heading" style="color: #9d9d9d; background-color: #3c3c3c">
                             <h2 style="font-size: 20px; padding: 0px;margin: 0px;" id="InfoH">Frais Hors Forfait : </h2>
@@ -603,6 +609,7 @@
 
                         </div>
                         {% set i = 1 %}
+                        <!-- Affichage des justificatifs déjà sauvegarder plus affichage du formulaire pour en sauvegarder des nouveaux -->
                         <div class="panel-body" style="max-height: 230px;min-height: 230px; overflow-y:scroll;">
                             <div id="toutJ" URL-prototype="{{ form_widget(form1.justificatif.vars.prototype.File)|e('html_attr')}}">
                                 {% for UneLigne in LesJustificatif %}

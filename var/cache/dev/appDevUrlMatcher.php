@@ -159,11 +159,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'test_validerfichefrais')), array (  '_controller' => 'TestBundle\\Controller\\DefaultController::ValiderAction',));
             }
 
-            // test_remboursefichefrais
-            if (0 === strpos($pathinfo, '/comptable/rembourse') && preg_match('#^/comptable/rembourse/(?P<id>[^/]++)/(?P<Annee>[^/]++)/(?P<Mois>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'test_remboursefichefrais')), array (  '_controller' => 'TestBundle\\Controller\\DefaultController::RembourseAction',));
-            }
-
         }
 
         if (0 === strpos($pathinfo, '/api')) {

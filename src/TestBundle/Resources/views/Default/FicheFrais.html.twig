@@ -1,5 +1,7 @@
 {% extends 'TestBundle::layout.html.twig' %}
 {% block body %}
+    <!-- Page qui affiches les détaille d'une fiche frais -->
+
     <div class="row" style="margin-left: 0px;margin-right: 0px;margin-top: 20px;">
         <div class="col-md-offset-3 col-lg-8">
             <div class="panel panel-success">
@@ -8,6 +10,8 @@
                     <h1 style="text-align: center;margin-top: 0px;">Fiche Frais {{ Mois }} {{ Annee }}</h1>
                 </div>
                 <div class="panel-body">
+
+                    <!-- Affichage des frais forfaits -->
                     <h1 style="font-size: 20px;text-align: center">Frais Forfait :</h1>
                     <div class="table-responsive">
                         <table class="table table-bordered" style="margin: 0px">
@@ -52,7 +56,7 @@
                                 </thead>
                             </table>
                     </div>
-                    <!-- Tableau Frais Hor Forfait -->
+                    <!-- Affichage des frais hors forfaits  -->
                     <h1 style="font-size: 20px;text-align: center">Frais Hor Forfait</h1>
                     <div class="table-responsive">
                         <table class="table table-bordered" style="margin: 0px">
@@ -90,7 +94,7 @@
                             <table class="table table-bordered">
                                 <thead>
                                 <tr>
-                                    <th>Total Frais Hor Forfait :</th>
+                                    <th>Total Frais Hors Forfait :</th>
                                     <th>{{ total2 }}€</th>
                                 </tr>
                                 </thead>
@@ -106,6 +110,7 @@
                         </thead>
                     </table>
 
+                    <!-- Affichage des justificatifs -->
                     <div class="container">
                         <div class="panel">
                             {% set i = 1 %}

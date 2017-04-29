@@ -33,10 +33,6 @@ test_consulterfichefraisC:
 test_validerfichefrais:
     path: /comptable/valider/{id_fiche}/{id_visiteur}
     defaults: {_controller: TestBundle:Default:Valider}
-# A VOIR
-test_remboursefichefrais:
-    path: /comptable/rembourse/{id}/{Annee}/{Mois}
-    defaults: {_controller: TestBundle:Default:Rembourse}
 ##########################---FIN COMPTABLE---#######################
 
 ##########################---ANDROID---------#######################
