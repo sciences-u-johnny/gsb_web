@@ -161,9 +161,10 @@
                     </div>
                     <div class="container">
                         <div class="panel">
-                            {% set i = 1 %}
+                            {% set i = 0 %}
                             {% for unJusti in Fiche.getJustificatif() %}
-                                <a href="{{ asset('Uplaod/Jusificatif/' ~unJusti.getId()~ '/' ~ unJusti.getURL()) }}" target="_blank">Justificatif {{ i }}</a>
+                                {{ form_widget(form1.justificatif[i],{'attr': {'class ': 'hidden'}}) }}
+                                <a href="{{ asset('Uplaod/Jusificatif/' ~unJusti.getId()~ '/' ~ unJusti.getURL()) }}" target="_blank">Justificatif {{ i+1 }}</a>
                                 {% set i = i+1 %}
                             {% endfor %}
                         </div>

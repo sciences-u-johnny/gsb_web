@@ -22,20 +22,20 @@ class __TwigTemplate_21c4db64b45a8d2a534137a30cd48dd6a92ddbabca916582e8b07dfa6ad
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4a1818678fbcfcb6a0f7f77e9ec457f247f65bd2fb69dd4241cbf6965648039e = $this->env->getExtension("native_profiler");
-        $__internal_4a1818678fbcfcb6a0f7f77e9ec457f247f65bd2fb69dd4241cbf6965648039e->enter($__internal_4a1818678fbcfcb6a0f7f77e9ec457f247f65bd2fb69dd4241cbf6965648039e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TestBundle:Default:Valider.html.twig"));
+        $__internal_7e48afaa92bc3c46ad1a7b785b054d4c73e50fac9e22deb203d9ddb6c6cef2e3 = $this->env->getExtension("native_profiler");
+        $__internal_7e48afaa92bc3c46ad1a7b785b054d4c73e50fac9e22deb203d9ddb6c6cef2e3->enter($__internal_7e48afaa92bc3c46ad1a7b785b054d4c73e50fac9e22deb203d9ddb6c6cef2e3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TestBundle:Default:Valider.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4a1818678fbcfcb6a0f7f77e9ec457f247f65bd2fb69dd4241cbf6965648039e->leave($__internal_4a1818678fbcfcb6a0f7f77e9ec457f247f65bd2fb69dd4241cbf6965648039e_prof);
+        $__internal_7e48afaa92bc3c46ad1a7b785b054d4c73e50fac9e22deb203d9ddb6c6cef2e3->leave($__internal_7e48afaa92bc3c46ad1a7b785b054d4c73e50fac9e22deb203d9ddb6c6cef2e3_prof);
 
     }
 
     // line 2
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_b209574a671050e0e99e3b33a9edd703936a3580fee35a54b536259789ae621d = $this->env->getExtension("native_profiler");
-        $__internal_b209574a671050e0e99e3b33a9edd703936a3580fee35a54b536259789ae621d->enter($__internal_b209574a671050e0e99e3b33a9edd703936a3580fee35a54b536259789ae621d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_b6a622f4764184667d6bc8c4317e885229fa1c7e3350c811677432d0ac77b610 = $this->env->getExtension("native_profiler");
+        $__internal_b6a622f4764184667d6bc8c4317e885229fa1c7e3350c811677432d0ac77b610->enter($__internal_b6a622f4764184667d6bc8c4317e885229fa1c7e3350c811677432d0ac77b610_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 3
         echo "
@@ -135,15 +135,15 @@ class __TwigTemplate_21c4db64b45a8d2a534137a30cd48dd6a92ddbabca916582e8b07dfa6ad
 
 ";
         
-        $__internal_b209574a671050e0e99e3b33a9edd703936a3580fee35a54b536259789ae621d->leave($__internal_b209574a671050e0e99e3b33a9edd703936a3580fee35a54b536259789ae621d_prof);
+        $__internal_b6a622f4764184667d6bc8c4317e885229fa1c7e3350c811677432d0ac77b610->leave($__internal_b6a622f4764184667d6bc8c4317e885229fa1c7e3350c811677432d0ac77b610_prof);
 
     }
 
     // line 72
     public function block_body($context, array $blocks = array())
     {
-        $__internal_7563471c90b0be2b33afb5ad8a1f9f9ac215f746ece9763d27703a3652842e5a = $this->env->getExtension("native_profiler");
-        $__internal_7563471c90b0be2b33afb5ad8a1f9f9ac215f746ece9763d27703a3652842e5a->enter($__internal_7563471c90b0be2b33afb5ad8a1f9f9ac215f746ece9763d27703a3652842e5a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_f7495a03d98c4aaed99cf2eb954e0612ce898d5f9c6e3faa189571053ddff175 = $this->env->getExtension("native_profiler");
+        $__internal_f7495a03d98c4aaed99cf2eb954e0612ce898d5f9c6e3faa189571053ddff175->enter($__internal_f7495a03d98c4aaed99cf2eb954e0612ce898d5f9c6e3faa189571053ddff175_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 73
         echo "
@@ -339,28 +339,32 @@ class __TwigTemplate_21c4db64b45a8d2a534137a30cd48dd6a92ddbabca916582e8b07dfa6ad
                         <div class=\"panel\">
                             ";
         // line 164
-        $context["i"] = 1;
+        $context["i"] = 0;
         // line 165
         echo "                            ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["Fiche"]) ? $context["Fiche"] : $this->getContext($context, "Fiche")), "getJustificatif", array(), "method"));
         foreach ($context['_seq'] as $context["_key"] => $context["unJusti"]) {
             // line 166
-            echo "                                <a href=\"";
+            echo "                                ";
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form1"]) ? $context["form1"] : $this->getContext($context, "form1")), "justificatif", array()), (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), array(), "array"), 'widget', array("attr" => array("class " => "hidden")));
+            echo "
+                                <a href=\"";
+            // line 167
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl(((("Uplaod/Jusificatif/" . $this->getAttribute($context["unJusti"], "getId", array(), "method")) . "/") . $this->getAttribute($context["unJusti"], "getURL", array(), "method"))), "html", null, true);
             echo "\" target=\"_blank\">Justificatif ";
-            echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
+            echo twig_escape_filter($this->env, ((isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")) + 1), "html", null, true);
             echo "</a>
                                 ";
-            // line 167
-            $context["i"] = ((isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")) + 1);
             // line 168
+            $context["i"] = ((isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")) + 1);
+            // line 169
             echo "                            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['unJusti'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 169
+        // line 170
         echo "                        </div>
                     </div>
 
@@ -370,12 +374,12 @@ class __TwigTemplate_21c4db64b45a8d2a534137a30cd48dd6a92ddbabca916582e8b07dfa6ad
                 <div class=\"panel-footer\" style=\"margin: 0px\">
                     <div class=\"form-group\" style=\"margin: 0px;padding: 0px\">
                         ";
-        // line 177
+        // line 178
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form1"]) ? $context["form1"] : $this->getContext($context, "form1")), "Sauvegarder", array()), 'widget', array("attr" => array("class" => "hidden")));
         echo "
                         <input class=\"btn btn-success\" value=\"Valider\" type=\"submit\"/>
                         ";
-        // line 179
+        // line 180
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form1"]) ? $context["form1"] : $this->getContext($context, "form1")), 'form_end');
         echo "
                     </div>
@@ -388,7 +392,7 @@ class __TwigTemplate_21c4db64b45a8d2a534137a30cd48dd6a92ddbabca916582e8b07dfa6ad
 
 ";
         
-        $__internal_7563471c90b0be2b33afb5ad8a1f9f9ac215f746ece9763d27703a3652842e5a->leave($__internal_7563471c90b0be2b33afb5ad8a1f9f9ac215f746ece9763d27703a3652842e5a_prof);
+        $__internal_f7495a03d98c4aaed99cf2eb954e0612ce898d5f9c6e3faa189571053ddff175->leave($__internal_f7495a03d98c4aaed99cf2eb954e0612ce898d5f9c6e3faa189571053ddff175_prof);
 
     }
 
@@ -404,7 +408,7 @@ class __TwigTemplate_21c4db64b45a8d2a534137a30cd48dd6a92ddbabca916582e8b07dfa6ad
 
     public function getDebugInfo()
     {
-        return array (  379 => 179,  374 => 177,  364 => 169,  358 => 168,  356 => 167,  349 => 166,  344 => 165,  342 => 164,  335 => 159,  329 => 158,  327 => 157,  322 => 155,  319 => 154,  314 => 152,  308 => 148,  306 => 147,  300 => 146,  296 => 145,  292 => 144,  288 => 143,  283 => 142,  278 => 141,  276 => 140,  258 => 124,  252 => 123,  250 => 122,  244 => 119,  241 => 118,  236 => 116,  230 => 112,  228 => 111,  222 => 110,  218 => 109,  214 => 108,  210 => 107,  206 => 106,  203 => 105,  198 => 104,  196 => 103,  179 => 89,  167 => 86,  161 => 82,  159 => 81,  149 => 73,  143 => 72,  83 => 19,  78 => 17,  73 => 15,  69 => 14,  65 => 13,  60 => 11,  55 => 9,  51 => 8,  46 => 6,  41 => 3,  35 => 2,  11 => 1,);
+        return array (  383 => 180,  378 => 178,  368 => 170,  362 => 169,  360 => 168,  354 => 167,  349 => 166,  344 => 165,  342 => 164,  335 => 159,  329 => 158,  327 => 157,  322 => 155,  319 => 154,  314 => 152,  308 => 148,  306 => 147,  300 => 146,  296 => 145,  292 => 144,  288 => 143,  283 => 142,  278 => 141,  276 => 140,  258 => 124,  252 => 123,  250 => 122,  244 => 119,  241 => 118,  236 => 116,  230 => 112,  228 => 111,  222 => 110,  218 => 109,  214 => 108,  210 => 107,  206 => 106,  203 => 105,  198 => 104,  196 => 103,  179 => 89,  167 => 86,  161 => 82,  159 => 81,  149 => 73,  143 => 72,  83 => 19,  78 => 17,  73 => 15,  69 => 14,  65 => 13,  60 => 11,  55 => 9,  51 => 8,  46 => 6,  41 => 3,  35 => 2,  11 => 1,);
     }
 }
 /* {% extends 'TestBundle::layout.html.twig' %}*/
@@ -570,9 +574,10 @@ class __TwigTemplate_21c4db64b45a8d2a534137a30cd48dd6a92ddbabca916582e8b07dfa6ad
 /*                     </div>*/
 /*                     <div class="container">*/
 /*                         <div class="panel">*/
-/*                             {% set i = 1 %}*/
+/*                             {% set i = 0 %}*/
 /*                             {% for unJusti in Fiche.getJustificatif() %}*/
-/*                                 <a href="{{ asset('Uplaod/Jusificatif/' ~unJusti.getId()~ '/' ~ unJusti.getURL()) }}" target="_blank">Justificatif {{ i }}</a>*/
+/*                                 {{ form_widget(form1.justificatif[i],{'attr': {'class ': 'hidden'}}) }}*/
+/*                                 <a href="{{ asset('Uplaod/Jusificatif/' ~unJusti.getId()~ '/' ~ unJusti.getURL()) }}" target="_blank">Justificatif {{ i+1 }}</a>*/
 /*                                 {% set i = i+1 %}*/
 /*                             {% endfor %}*/
 /*                         </div>*/
