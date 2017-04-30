@@ -307,18 +307,22 @@ class DefaultController extends Controller
             }
 
             //On relie tout les lignes forfaits, lignes hors forfaits et justificatif qui vienne d'être entrer par l'utilisateur a la fiche de frais
-            $LigneFF = $FIche->getLigneForfais();
-            foreach ($LigneFF as $uneLigneFF) {
-                if ($uneLigneFF->getFichefrai() == null) {
-                    //On calcule le montant du frais
-                    $uneLigneFF->setMontant($uneLigneFF->getQuantite()*$uneLigneFF->getFraisForfais()->getMontant());
-                    $uneLigneFF->setFichefrai($FIche);
+            if ($FIche->getLigneForfais() != null) {
+                $LigneFF = $FIche->getLigneForfais();
+                foreach ($LigneFF as $uneLigneFF) {
+                    if ($uneLigneFF->getFichefrai() == null) {
+                        //On calcule le montant du frais
+                        $uneLigneFF->setMontant($uneLigneFF->getQuantite() * $uneLigneFF->getFraisForfais()->getMontant());
+                        $uneLigneFF->setFichefrai($FIche);
+                    }
                 }
             }
-            $LigneHF = $FIche->getLigneHorForfait();
-            foreach ($LigneHF as $uneLigneHF){
-                if ($uneLigneHF->getFichefrai() == null ){
-                    $uneLigneHF->setFichefrai($FIche);
+            if ($FIche->getLigneHorForfait() != null) {
+                $LigneHF = $FIche->getLigneHorForfait();
+                foreach ($LigneHF as $uneLigneHF) {
+                    if ($uneLigneHF->getFichefrai() == null) {
+                        $uneLigneHF->setFichefrai($FIche);
+                    }
                 }
             }
             $Justificatif = $FIche->getJustificatif();

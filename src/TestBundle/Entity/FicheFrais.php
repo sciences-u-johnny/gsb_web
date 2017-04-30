@@ -31,9 +31,9 @@ class FicheFrais
     private $nombreJustificatif;
 
     /**
-     * @var int
+     * @var float
      *
-     * @ORM\Column(name="MontantValide", type="integer")
+     * @ORM\Column(name="MontantValide", type="float")
      */
     private $montantValide;
 
@@ -112,29 +112,7 @@ class FicheFrais
         return $this->nombreJustificatif;
     }
 
-    /**
-     * Set montantValide
-     *
-     * @param integer $montantValide
-     *
-     * @return FicheFrais
-     */
-    public function setMontantValide($montantValide)
-    {
-        $this->montantValide = $montantValide;
 
-        return $this;
-    }
-
-    /**
-     * Get montantValide
-     *
-     * @return int
-     */
-    public function getMontantValide()
-    {
-        return $this->montantValide;
-    }
 
 
 
@@ -411,4 +389,28 @@ class FicheFrais
     }
 
 
+
+    /**
+     * Set montantValide
+     *
+     * @param float $montantValide
+     *
+     * @return FicheFrais
+     */
+    public function setMontantValide($montantValide)
+    {
+        $this->montantValide = $montantValide;
+
+        return $this;
+    }
+
+    /**
+     * Get montantValide
+     *
+     * @return float
+     */
+    public function getMontantValide()
+    {
+        return $this->montantValide;
+    }
 }

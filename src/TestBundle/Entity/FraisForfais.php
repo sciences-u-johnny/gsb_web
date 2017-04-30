@@ -24,9 +24,9 @@ class FraisForfais
 
 
     /**
-     * @var int
+     * @var float
      *
-     * @ORM\Column(name="Montant", type="integer")
+     * @ORM\Column(name="Montant", type="float")
      */
     private $montant;
 
@@ -69,29 +69,7 @@ class FraisForfais
         return $this->id;
     }
 
-    /**
-     * Set montant
-     *
-     * @param integer $montant
-     *
-     * @return FraisForfais
-     */
-    public function setMontant($montant)
-    {
-        $this->montant = $montant;
 
-        return $this;
-    }
-
-    /**
-     * Get montant
-     *
-     * @return integer
-     */
-    public function getMontant()
-    {
-        return $this->montant;
-    }
 
     /**
      * Add ligneForFai
@@ -159,5 +137,29 @@ class FraisForfais
     public function getLigneFForFais()
     {
         return $this->LigneFForFais;
+    }
+
+    /**
+     * Set montant
+     *
+     * @param float $montant
+     *
+     * @return FraisForfais
+     */
+    public function setMontant($montant)
+    {
+        $this->montant = $montant;
+
+        return $this;
+    }
+
+    /**
+     * Get montant
+     *
+     * @return float
+     */
+    public function getMontant()
+    {
+        return $this->montant;
     }
 }
