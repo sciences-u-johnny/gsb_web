@@ -173,7 +173,7 @@ class DefaultController extends Controller
 
     //-------------------------------------------------PAGE USER--------------------------------------------------------------
 
-    //------------------------------------------------FONCTION AJOUT/SUPPRSSION LIGNE FORFAIT ET HOR FORFAIT -----------------------------------
+    //------------------------------------------------FONCTION AJOUT/SUPPRSSION LIGNE FORFAIT ET HORS FORFAIT -----------------------------------
     public function renseignerfichefraisAction(Request $request)
     {
         //Recuperation de l'utilisateur, et des fiches de l'utilisateur
@@ -355,7 +355,7 @@ class DefaultController extends Controller
             }
 
             //On verfier si la Fiche n'est pas vide si elle est vide on la supprime :
-            if (count($FIche->getLigneForFais()) > 0 || count($FIche->getLigneHorForFait())  >0 ||count($Fiche->getJustificatif()) > 0) {
+            if (count($FIche->getLigneForFais()) > 0 || count($FIche->getLigneHorForFait())  >0 ||count($FIche->getJustificatif()) > 0) {
                 //On envoi les donnée a la BDD
                 $em2->persist($FIche);
             }else{
@@ -371,7 +371,7 @@ class DefaultController extends Controller
         //Envoie des données nécessaire pour le bon fonctionnement de la page (Formulaire de renseignement d'un fiche, Date du jour, ...)
         return $this->render('TestBundle:Default:RenseignerFicheFrais.html.twig',array('LesJustificatif'=>$FIche->getJustificatif(),'Datey'=>$Datej->format('Y'),'Datem'=>$Datej->format('m'),'Datej'=>$Datej->format('d'),'FicheFrais' => $FIche,'form1'=>$form1->createView(),'MontantValide'=>$FIche->getMontantValide(),'DateMois'=>$Date->format('F'),'DateAnne'=>$Date->format('Y')));
     }
-//------------------------------------------------FIN FONCTION AJOUT/SUPPRSSION LIGNE FORFAIT ET HOR FORFAIT -----------------------------------
+//------------------------------------------------FIN FONCTION AJOUT/SUPPRSSION LIGNE FORFAIT ET HORS FORFAIT -----------------------------------
 
 
 
@@ -558,7 +558,7 @@ class DefaultController extends Controller
             //Si la fiche a au moins une ligne valider on la passe dans l'état 'En paiement' si non on la passe dans l'état 'Invalide'
             if ($UneLigneValide){
                 //Mise a jour de l'etat de la fiche :
-                $Fiche->setEtat($this->getDoctrine()->getRepository('TestBundle:Etat')->findOneByid('En paiment'));
+                $Fiche->setEtat($this->getDoctrine()->getRepository('TestBundle:Etat')->findOneByid('En paiement'));
             }else{
                 //Mise a jour de l'etat de la fiche :
                 $Fiche->setEtat($this->getDoctrine()->getRepository('TestBundle:Etat')->findOneByid('Invalide'));

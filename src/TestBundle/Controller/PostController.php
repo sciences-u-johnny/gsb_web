@@ -108,7 +108,7 @@ class PostController extends Controller
     }
 
 
-    //Fonction qui renvoie tout les information d'une fiche (Ligne Fofais et hor forfais, Monatant valide,Date Fiche) :
+    //Fonction qui renvoie tout les information d'une fiche (Ligne Fofais et hors forfais, Monatant valide,Date Fiche) :
     public function infoficheAction(Request $request){
 
         //Déclaration de variable à envoyer en JSON
