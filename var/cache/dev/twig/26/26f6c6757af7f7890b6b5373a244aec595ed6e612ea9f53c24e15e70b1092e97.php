@@ -22,24 +22,24 @@ class __TwigTemplate_45f9e0dc49a7993cfcb8da76116901d542a299cbff1523cf2183487261e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c57a2e71550c277d4988f43fcd41ecebae2f5de1bd9f844522f3bf042ea116f8 = $this->env->getExtension("native_profiler");
-        $__internal_c57a2e71550c277d4988f43fcd41ecebae2f5de1bd9f844522f3bf042ea116f8->enter($__internal_c57a2e71550c277d4988f43fcd41ecebae2f5de1bd9f844522f3bf042ea116f8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Test/Default/Consulter.html.twig"));
+        $__internal_042b1ded75d710208b3513769fafcdb3fdfd95fd57f0c3fa671345ea071fded6 = $this->env->getExtension("native_profiler");
+        $__internal_042b1ded75d710208b3513769fafcdb3fdfd95fd57f0c3fa671345ea071fded6->enter($__internal_042b1ded75d710208b3513769fafcdb3fdfd95fd57f0c3fa671345ea071fded6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Test/Default/Consulter.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c57a2e71550c277d4988f43fcd41ecebae2f5de1bd9f844522f3bf042ea116f8->leave($__internal_c57a2e71550c277d4988f43fcd41ecebae2f5de1bd9f844522f3bf042ea116f8_prof);
+        $__internal_042b1ded75d710208b3513769fafcdb3fdfd95fd57f0c3fa671345ea071fded6->leave($__internal_042b1ded75d710208b3513769fafcdb3fdfd95fd57f0c3fa671345ea071fded6_prof);
 
     }
 
     // line 3
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_007ecb3e534be5042939a35a646db68e8427e40856fafd89ed8ae5b7594d6207 = $this->env->getExtension("native_profiler");
-        $__internal_007ecb3e534be5042939a35a646db68e8427e40856fafd89ed8ae5b7594d6207->enter($__internal_007ecb3e534be5042939a35a646db68e8427e40856fafd89ed8ae5b7594d6207_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_d361ea3775c9cca0eae6b61df6a1bbd48dac7a32b5b79d54b9f83907f5be6aab = $this->env->getExtension("native_profiler");
+        $__internal_d361ea3775c9cca0eae6b61df6a1bbd48dac7a32b5b79d54b9f83907f5be6aab->enter($__internal_d361ea3775c9cca0eae6b61df6a1bbd48dac7a32b5b79d54b9f83907f5be6aab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
         echo "
-
+<!-- Page qui liste les fiches de l'utilisateur -->
 
 <link rel=\"stylesheet\" href=\"";
         // line 7
@@ -84,34 +84,36 @@ class __TwigTemplate_45f9e0dc49a7993cfcb8da76116901d542a299cbff1523cf2183487261e
         echo "\"></script>
     <script>
         jQuery(document).ready(function()  {
+
+            //Récuperation des information des Ficches :
             var tabEtat = new Array();
             var tabAffichage = new Array();
             var tabMoi = new Array();
             var tabAnne = new Array();
             var tabMontant = new Array();
             ";
-        // line 28
+        // line 30
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["LesFiches"]) ? $context["LesFiches"] : $this->getContext($context, "LesFiches")));
         foreach ($context['_seq'] as $context["_key"] => $context["uneFiche"]) {
-            // line 29
+            // line 31
             echo "            tabEtat.push(\"";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["uneFiche"], "getEtat", array(), "method"), "getid", array(), "method"), "html", null, true);
             echo "\");
             tabMoi.push(\"";
-            // line 30
+            // line 32
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["uneFiche"], "getMois", array(), "method"), "format", array(0 => "Y-m-d"), "method"), "html", null, true);
             echo "\");
             tabAffichage.push(\"";
-            // line 31
+            // line 33
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["uneFiche"], "getMois", array(), "method"), "format", array(0 => "m-Y"), "method"), "html", null, true);
             echo "\");
             tabAnne.push(";
-            // line 32
+            // line 34
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["uneFiche"], "getMois", array(), "method"), "format", array(0 => "Y"), "method"), "html", null, true);
             echo ");
             tabMontant.push(";
-            // line 33
+            // line 35
             echo twig_escape_filter($this->env, $this->getAttribute($context["uneFiche"], "getMontantValide", array(), "method"), "html", null, true);
             echo ");
             ";
@@ -119,10 +121,10 @@ class __TwigTemplate_45f9e0dc49a7993cfcb8da76116901d542a299cbff1523cf2183487261e
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['uneFiche'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
+        // line 37
         echo "
 
-
+            //Affichage des Fiche en fonction de la date choisie par l'utilisateur
             \$(document).on('change','#ChoixAnnee',function () {
 
                 var v  = \$(this).val();
@@ -152,26 +154,19 @@ class __TwigTemplate_45f9e0dc49a7993cfcb8da76116901d542a299cbff1523cf2183487261e
 
 ";
         
-        $__internal_007ecb3e534be5042939a35a646db68e8427e40856fafd89ed8ae5b7594d6207->leave($__internal_007ecb3e534be5042939a35a646db68e8427e40856fafd89ed8ae5b7594d6207_prof);
+        $__internal_d361ea3775c9cca0eae6b61df6a1bbd48dac7a32b5b79d54b9f83907f5be6aab->leave($__internal_d361ea3775c9cca0eae6b61df6a1bbd48dac7a32b5b79d54b9f83907f5be6aab_prof);
 
     }
 
-    // line 66
+    // line 68
     public function block_body($context, array $blocks = array())
     {
-        $__internal_197ca61d4607cd73b74dfd491bf943be6846ff7d0d7eb717dfef1987cb5adb4e = $this->env->getExtension("native_profiler");
-        $__internal_197ca61d4607cd73b74dfd491bf943be6846ff7d0d7eb717dfef1987cb5adb4e->enter($__internal_197ca61d4607cd73b74dfd491bf943be6846ff7d0d7eb717dfef1987cb5adb4e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_5b6315bfb5720b85cff454c43c6ab9ccb40c38fb3459af9ad9da44f94a2073b3 = $this->env->getExtension("native_profiler");
+        $__internal_5b6315bfb5720b85cff454c43c6ab9ccb40c38fb3459af9ad9da44f94a2073b3->enter($__internal_5b6315bfb5720b85cff454c43c6ab9ccb40c38fb3459af9ad9da44f94a2073b3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 67
+        // line 69
         echo "
-
-    <!--Jquery Fenetre Fiche Frais -->
-    <div id=\"FicheFrais\" title=\"Fiche Frais \" style=\"display:none;\">
-        <p>
-
-        </p>
-    </div>
-
+    <!-- Affichage des fiches pour la consultation -->
      <div class=\"row\" style=\"margin-left: 0px;margin-right: 0px;margin-top: 20px;\" >
          <div class=\"col-md-offset-3 col-lg-8\">
 
@@ -183,11 +178,11 @@ class __TwigTemplate_45f9e0dc49a7993cfcb8da76116901d542a299cbff1523cf2183487261e
                      <select id=\"ChoixAnnee\"  class=\"\">
                              <option value=\"null\"></option>
                          ";
-        // line 86
+        // line 81
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["LesDates"]) ? $context["LesDates"] : $this->getContext($context, "LesDates")));
         foreach ($context['_seq'] as $context["_key"] => $context["uneDate"]) {
-            // line 87
+            // line 82
             echo "                             <option value=\"";
             echo twig_escape_filter($this->env, $context["uneDate"], "html", null, true);
             echo "\">";
@@ -198,7 +193,7 @@ class __TwigTemplate_45f9e0dc49a7993cfcb8da76116901d542a299cbff1523cf2183487261e
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['uneDate'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 89
+        // line 84
         echo "                             </select>
 
                      </p>
@@ -230,7 +225,7 @@ class __TwigTemplate_45f9e0dc49a7993cfcb8da76116901d542a299cbff1523cf2183487261e
 
 ";
         
-        $__internal_197ca61d4607cd73b74dfd491bf943be6846ff7d0d7eb717dfef1987cb5adb4e->leave($__internal_197ca61d4607cd73b74dfd491bf943be6846ff7d0d7eb717dfef1987cb5adb4e_prof);
+        $__internal_5b6315bfb5720b85cff454c43c6ab9ccb40c38fb3459af9ad9da44f94a2073b3->leave($__internal_5b6315bfb5720b85cff454c43c6ab9ccb40c38fb3459af9ad9da44f94a2073b3_prof);
 
     }
 
@@ -246,14 +241,14 @@ class __TwigTemplate_45f9e0dc49a7993cfcb8da76116901d542a299cbff1523cf2183487261e
 
     public function getDebugInfo()
     {
-        return array (  202 => 89,  191 => 87,  187 => 86,  166 => 67,  160 => 66,  123 => 35,  115 => 33,  111 => 32,  107 => 31,  103 => 30,  98 => 29,  94 => 28,  83 => 20,  78 => 18,  73 => 16,  69 => 15,  65 => 14,  60 => 12,  55 => 10,  51 => 9,  46 => 7,  41 => 4,  35 => 3,  11 => 1,);
+        return array (  197 => 84,  186 => 82,  182 => 81,  168 => 69,  162 => 68,  125 => 37,  117 => 35,  113 => 34,  109 => 33,  105 => 32,  100 => 31,  96 => 30,  83 => 20,  78 => 18,  73 => 16,  69 => 15,  65 => 14,  60 => 12,  55 => 10,  51 => 9,  46 => 7,  41 => 4,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends 'TestBundle::layout.html.twig' %}*/
 /* */
 /* {% block stylesheets %}*/
 /* */
-/* */
+/* <!-- Page qui liste les fiches de l'utilisateur -->*/
 /* */
 /* <link rel="stylesheet" href="{{ asset('bundles/framework/bootstrap/css/bootstrap.min.css') }}">*/
 /* */
@@ -271,6 +266,8 @@ class __TwigTemplate_45f9e0dc49a7993cfcb8da76116901d542a299cbff1523cf2183487261e
 /* <script src="{{ asset('bundles/framework/bootstrap/js/jquery.easing.js')}}"></script>*/
 /*     <script>*/
 /*         jQuery(document).ready(function()  {*/
+/* */
+/*             //Récuperation des information des Ficches :*/
 /*             var tabEtat = new Array();*/
 /*             var tabAffichage = new Array();*/
 /*             var tabMoi = new Array();*/
@@ -285,7 +282,7 @@ class __TwigTemplate_45f9e0dc49a7993cfcb8da76116901d542a299cbff1523cf2183487261e
 /*             {% endfor %}*/
 /* */
 /* */
-/* */
+/*             //Affichage des Fiche en fonction de la date choisie par l'utilisateur*/
 /*             $(document).on('change','#ChoixAnnee',function () {*/
 /* */
 /*                 var v  = $(this).val();*/
@@ -316,14 +313,7 @@ class __TwigTemplate_45f9e0dc49a7993cfcb8da76116901d542a299cbff1523cf2183487261e
 /* {% endblock stylesheets %}*/
 /* {% block body %}*/
 /* */
-/* */
-/*     <!--Jquery Fenetre Fiche Frais -->*/
-/*     <div id="FicheFrais" title="Fiche Frais " style="display:none;">*/
-/*         <p>*/
-/* */
-/*         </p>*/
-/*     </div>*/
-/* */
+/*     <!-- Affichage des fiches pour la consultation -->*/
 /*      <div class="row" style="margin-left: 0px;margin-right: 0px;margin-top: 20px;" >*/
 /*          <div class="col-md-offset-3 col-lg-8">*/
 /* */

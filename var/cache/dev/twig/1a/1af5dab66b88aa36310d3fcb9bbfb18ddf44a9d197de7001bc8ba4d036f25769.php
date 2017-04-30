@@ -22,24 +22,24 @@ class __TwigTemplate_bf08c963c0e67e49b6bdb308c3bcece20b86ded804b4c4ecf538fbf66a5
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_93b61383655e36ebd1bcbc6406e31b19fc8bdeabbf7984eb83c424c887d9508e = $this->env->getExtension("native_profiler");
-        $__internal_93b61383655e36ebd1bcbc6406e31b19fc8bdeabbf7984eb83c424c887d9508e->enter($__internal_93b61383655e36ebd1bcbc6406e31b19fc8bdeabbf7984eb83c424c887d9508e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Test/Default/Valider.html.twig"));
+        $__internal_6b357a73e865ee37b63aa5f2dfdd5d9fbe4fceef37983e6e11979d85690955f2 = $this->env->getExtension("native_profiler");
+        $__internal_6b357a73e865ee37b63aa5f2dfdd5d9fbe4fceef37983e6e11979d85690955f2->enter($__internal_6b357a73e865ee37b63aa5f2dfdd5d9fbe4fceef37983e6e11979d85690955f2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Test/Default/Valider.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_93b61383655e36ebd1bcbc6406e31b19fc8bdeabbf7984eb83c424c887d9508e->leave($__internal_93b61383655e36ebd1bcbc6406e31b19fc8bdeabbf7984eb83c424c887d9508e_prof);
+        $__internal_6b357a73e865ee37b63aa5f2dfdd5d9fbe4fceef37983e6e11979d85690955f2->leave($__internal_6b357a73e865ee37b63aa5f2dfdd5d9fbe4fceef37983e6e11979d85690955f2_prof);
 
     }
 
     // line 2
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_8ed9491ee1140bd9295ea17f461f20201ea0500dc86a7fc7337680a71a3a1ba1 = $this->env->getExtension("native_profiler");
-        $__internal_8ed9491ee1140bd9295ea17f461f20201ea0500dc86a7fc7337680a71a3a1ba1->enter($__internal_8ed9491ee1140bd9295ea17f461f20201ea0500dc86a7fc7337680a71a3a1ba1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_fc23efc0770b83d7fcc68b214e9467b6c98e8622a234e5a502f3bfb537c68c10 = $this->env->getExtension("native_profiler");
+        $__internal_fc23efc0770b83d7fcc68b214e9467b6c98e8622a234e5a502f3bfb537c68c10->enter($__internal_fc23efc0770b83d7fcc68b214e9467b6c98e8622a234e5a502f3bfb537c68c10_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 3
         echo "
-
+<!-- Page de validation d'une fiche avec validation de tous les frais-->
 
 <link rel=\"stylesheet\" href=\"";
         // line 6
@@ -135,22 +135,22 @@ class __TwigTemplate_bf08c963c0e67e49b6bdb308c3bcece20b86ded804b4c4ecf538fbf66a5
 
 ";
         
-        $__internal_8ed9491ee1140bd9295ea17f461f20201ea0500dc86a7fc7337680a71a3a1ba1->leave($__internal_8ed9491ee1140bd9295ea17f461f20201ea0500dc86a7fc7337680a71a3a1ba1_prof);
+        $__internal_fc23efc0770b83d7fcc68b214e9467b6c98e8622a234e5a502f3bfb537c68c10->leave($__internal_fc23efc0770b83d7fcc68b214e9467b6c98e8622a234e5a502f3bfb537c68c10_prof);
 
     }
 
     // line 72
     public function block_body($context, array $blocks = array())
     {
-        $__internal_2c9465a5f1dbc67eb313aa5d01a9d2d13142a11f3567670ceafb5c5f78a037e8 = $this->env->getExtension("native_profiler");
-        $__internal_2c9465a5f1dbc67eb313aa5d01a9d2d13142a11f3567670ceafb5c5f78a037e8->enter($__internal_2c9465a5f1dbc67eb313aa5d01a9d2d13142a11f3567670ceafb5c5f78a037e8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_ba51ef629427da7b08e8d47a1e273bf32b78d2134f6aea615b29df7688cde721 = $this->env->getExtension("native_profiler");
+        $__internal_ba51ef629427da7b08e8d47a1e273bf32b78d2134f6aea615b29df7688cde721->enter($__internal_ba51ef629427da7b08e8d47a1e273bf32b78d2134f6aea615b29df7688cde721_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 73
         echo "
     <div id=\"dialog-confirm2\" title=\"Confirmation de la suppression\" style=\"display:none;\">
         <p>
             <span class=\"ui-icon ui-icon-alert\" style=\"float:left; margin:0 7px 20px 0;\"></span>
-            Etes-vous sûr de vouloir refuser ce frais hor frofait ?
+            Etes-vous sûr de vouloir refuser ce frais hors frofait ?
         </p>
     </div>
 
@@ -260,7 +260,7 @@ class __TwigTemplate_bf08c963c0e67e49b6bdb308c3bcece20b86ded804b4c4ecf538fbf66a5
                     </div>
 
                     <div class=\"responsive-table-line\" id=\"tout\" style=\"margin:0px auto;max-width:100%;\">
-                        <h1 style=\"font-size: 20px; text-align: center;\">Frais Hor Forfait :</h1>
+                        <h1 style=\"font-size: 20px; text-align: center;\">Frais Hors Forfait :</h1>
                         <table class=\"table table-bordered table-condensed table-body-center\" id=\"la\" >
                             <thead>
                             <tr>
@@ -388,7 +388,7 @@ class __TwigTemplate_bf08c963c0e67e49b6bdb308c3bcece20b86ded804b4c4ecf538fbf66a5
 
 ";
         
-        $__internal_2c9465a5f1dbc67eb313aa5d01a9d2d13142a11f3567670ceafb5c5f78a037e8->leave($__internal_2c9465a5f1dbc67eb313aa5d01a9d2d13142a11f3567670ceafb5c5f78a037e8_prof);
+        $__internal_ba51ef629427da7b08e8d47a1e273bf32b78d2134f6aea615b29df7688cde721->leave($__internal_ba51ef629427da7b08e8d47a1e273bf32b78d2134f6aea615b29df7688cde721_prof);
 
     }
 
@@ -410,7 +410,7 @@ class __TwigTemplate_bf08c963c0e67e49b6bdb308c3bcece20b86ded804b4c4ecf538fbf66a5
 /* {% extends 'TestBundle::layout.html.twig' %}*/
 /* {% block stylesheets %}*/
 /* */
-/* */
+/* <!-- Page de validation d'une fiche avec validation de tous les frais-->*/
 /* */
 /* <link rel="stylesheet" href="{{ asset('bundles/framework/bootstrap/css/bootstrap.min.css') }}">*/
 /* */
@@ -483,7 +483,7 @@ class __TwigTemplate_bf08c963c0e67e49b6bdb308c3bcece20b86ded804b4c4ecf538fbf66a5
 /*     <div id="dialog-confirm2" title="Confirmation de la suppression" style="display:none;">*/
 /*         <p>*/
 /*             <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>*/
-/*             Etes-vous sûr de vouloir refuser ce frais hor frofait ?*/
+/*             Etes-vous sûr de vouloir refuser ce frais hors frofait ?*/
 /*         </p>*/
 /*     </div>*/
 /* */
@@ -535,7 +535,7 @@ class __TwigTemplate_bf08c963c0e67e49b6bdb308c3bcece20b86ded804b4c4ecf538fbf66a5
 /*                     </div>*/
 /* */
 /*                     <div class="responsive-table-line" id="tout" style="margin:0px auto;max-width:100%;">*/
-/*                         <h1 style="font-size: 20px; text-align: center;">Frais Hor Forfait :</h1>*/
+/*                         <h1 style="font-size: 20px; text-align: center;">Frais Hors Forfait :</h1>*/
 /*                         <table class="table table-bordered table-condensed table-body-center" id="la" >*/
 /*                             <thead>*/
 /*                             <tr>*/

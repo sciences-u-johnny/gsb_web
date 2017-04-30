@@ -21,20 +21,20 @@ class __TwigTemplate_08fb75772002f86cf9f699655b6a3ce9fa991a9c094ec952225d4119c54
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7bf4ee9f9db48a9c4dbb832964784a746e7bc37395a57f7344cd4d75a4392fae = $this->env->getExtension("native_profiler");
-        $__internal_7bf4ee9f9db48a9c4dbb832964784a746e7bc37395a57f7344cd4d75a4392fae->enter($__internal_7bf4ee9f9db48a9c4dbb832964784a746e7bc37395a57f7344cd4d75a4392fae_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TestBundle:Default:FicheFrais.html.twig"));
+        $__internal_75abfd96ff447c40728ed5bfbc335192a80e73eedf539fb8b322cd75c5035b5c = $this->env->getExtension("native_profiler");
+        $__internal_75abfd96ff447c40728ed5bfbc335192a80e73eedf539fb8b322cd75c5035b5c->enter($__internal_75abfd96ff447c40728ed5bfbc335192a80e73eedf539fb8b322cd75c5035b5c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TestBundle:Default:FicheFrais.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_7bf4ee9f9db48a9c4dbb832964784a746e7bc37395a57f7344cd4d75a4392fae->leave($__internal_7bf4ee9f9db48a9c4dbb832964784a746e7bc37395a57f7344cd4d75a4392fae_prof);
+        $__internal_75abfd96ff447c40728ed5bfbc335192a80e73eedf539fb8b322cd75c5035b5c->leave($__internal_75abfd96ff447c40728ed5bfbc335192a80e73eedf539fb8b322cd75c5035b5c_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_7fff3666604658a3fefcdd6c36f2495651946eda2fcc9ddf974fbc6aecd286bc = $this->env->getExtension("native_profiler");
-        $__internal_7fff3666604658a3fefcdd6c36f2495651946eda2fcc9ddf974fbc6aecd286bc->enter($__internal_7fff3666604658a3fefcdd6c36f2495651946eda2fcc9ddf974fbc6aecd286bc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_ae32d078695c5640e03279923b06440201c14c1dc053dc6bb0b23dba403b1e0a = $this->env->getExtension("native_profiler");
+        $__internal_ae32d078695c5640e03279923b06440201c14c1dc053dc6bb0b23dba403b1e0a->enter($__internal_ae32d078695c5640e03279923b06440201c14c1dc053dc6bb0b23dba403b1e0a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         echo "    <!-- Page qui affiches les détaille d'une fiche frais -->
@@ -57,6 +57,8 @@ class __TwigTemplate_08fb75772002f86cf9f699655b6a3ce9fa991a9c094ec952225d4119c54
         echo "</h1>
                 </div>
                 <div class=\"panel-body\">
+
+                    <!-- Affichage des frais forfaits -->
                     <h1 style=\"font-size: 20px;text-align: center\">Frais Forfait :</h1>
                     <div class=\"table-responsive\">
                         <table class=\"table table-bordered\" style=\"margin: 0px\">
@@ -71,56 +73,56 @@ class __TwigTemplate_08fb75772002f86cf9f699655b6a3ce9fa991a9c094ec952225d4119c54
                             </thead>
                             <tbody>
                             ";
-        // line 26
+        // line 28
         $context["total"] = 0;
-        // line 27
+        // line 29
         echo "                            ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["Fiche"]) ? $context["Fiche"] : $this->getContext($context, "Fiche")), "getLigneForFais", array(), "method"));
         foreach ($context['_seq'] as $context["_key"] => $context["unefiche"]) {
-            // line 28
+            // line 30
             echo "                                ";
             if (($this->getAttribute($context["unefiche"], "getValide", array(), "method") == true)) {
-                // line 29
+                // line 31
                 echo "                                    <tr class=\"success\">
                                 ";
             } else {
-                // line 31
+                // line 33
                 echo "                                    <tr class=\"alert-danger\">
                                 ";
             }
-            // line 33
+            // line 35
             echo "                                <td>";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["unefiche"], "getDate", array(), "method"), "format", array(0 => "d/m/Y"), "method"), "html", null, true);
             echo "</td>
                                 <td>";
-            // line 34
+            // line 36
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["unefiche"], "getFraisForfais", array(), "method"), "getid", array(), "method"), "html", null, true);
             echo "</td>
                                 <td>";
-            // line 35
+            // line 37
             echo twig_escape_filter($this->env, $this->getAttribute($context["unefiche"], "getQuantite", array(), "method"), "html", null, true);
             echo "</td>
                                 <td>";
-            // line 36
+            // line 38
             echo twig_escape_filter($this->env, $this->getAttribute($context["unefiche"], "getMontant", array(), "method"), "html", null, true);
             echo "€</td>
                                 <td>";
-            // line 37
+            // line 39
             if (($this->getAttribute($context["unefiche"], "getValide", array(), "method") == true)) {
-                // line 38
+                // line 40
                 echo "                                        Oui
                                         ";
-                // line 39
+                // line 41
                 $context["total"] = ($this->getAttribute($context["unefiche"], "getMontant", array(), "method") + (isset($context["total"]) ? $context["total"] : $this->getContext($context, "total")));
-                // line 40
+                // line 42
                 echo "                                    ";
             } else {
-                // line 41
+                // line 43
                 echo "                                        Non
                                     ";
             }
-            // line 43
+            // line 45
             echo "                                </td>
 
                                 </tr>
@@ -129,22 +131,22 @@ class __TwigTemplate_08fb75772002f86cf9f699655b6a3ce9fa991a9c094ec952225d4119c54
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['unefiche'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 47
+        // line 49
         echo "                            </tbody>
                             <table class=\"table table-bordered\">
                                 <thead>
                                 <tr>
                                     <th>Total Frais Forfait :</th>
                                     <th>";
-        // line 52
+        // line 54
         echo twig_escape_filter($this->env, (isset($context["total"]) ? $context["total"] : $this->getContext($context, "total")), "html", null, true);
         echo "€</th>
                                 </tr>
                                 </thead>
                             </table>
                     </div>
-                    <!-- Tableau Frais Hor Forfait -->
-                    <h1 style=\"font-size: 20px;text-align: center\">Frais Hor Forfait</h1>
+                    <!-- Affichage des frais hors forfaits  -->
+                    <h1 style=\"font-size: 20px;text-align: center\">Frais Hors Forfait</h1>
                     <div class=\"table-responsive\">
                         <table class=\"table table-bordered\" style=\"margin: 0px\">
                             <thead>
@@ -157,54 +159,54 @@ class __TwigTemplate_08fb75772002f86cf9f699655b6a3ce9fa991a9c094ec952225d4119c54
                             </thead>
                             <tbody>
                             ";
-        // line 70
+        // line 72
         $context["total2"] = 0;
-        // line 71
+        // line 73
         echo "                            ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["Fiche"]) ? $context["Fiche"] : $this->getContext($context, "Fiche")), "getLigneHorForFait", array(), "method"));
         foreach ($context['_seq'] as $context["_key"] => $context["unefiche"]) {
-            // line 72
+            // line 74
             echo "                                ";
             if (($this->getAttribute($context["unefiche"], "getValide", array(), "method") == true)) {
-                // line 73
+                // line 75
                 echo "                                    <tr class=\"success\">
                                 ";
             } else {
-                // line 75
+                // line 77
                 echo "                                    <tr class=\"alert-danger\">
                                 ";
             }
-            // line 77
+            // line 79
             echo "
                                 <td>";
-            // line 78
+            // line 80
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["unefiche"], "getDate", array(), "method"), "format", array(0 => "d/m/Y"), "method"), "html", null, true);
             echo "</td>
                                 <td>";
-            // line 79
+            // line 81
             echo twig_escape_filter($this->env, $this->getAttribute($context["unefiche"], "getLibelle", array(), "method"), "html", null, true);
             echo "</td>
                                 <td>";
-            // line 80
+            // line 82
             echo twig_escape_filter($this->env, $this->getAttribute($context["unefiche"], "getMontant", array(), "method"), "html", null, true);
             echo "€</td>
                                 <td>";
-            // line 81
+            // line 83
             if (($this->getAttribute($context["unefiche"], "getValide", array(), "method") == true)) {
-                // line 82
+                // line 84
                 echo "                                        Oui
                                         ";
-                // line 83
+                // line 85
                 $context["total2"] = ($this->getAttribute($context["unefiche"], "getMontant", array(), "method") + (isset($context["total2"]) ? $context["total2"] : $this->getContext($context, "total2")));
-                // line 84
+                // line 86
                 echo "                                    ";
             } else {
-                // line 85
+                // line 87
                 echo "                                        Non
                                     ";
             }
-            // line 87
+            // line 89
             echo "                                </td>
 
                                 </tr>
@@ -213,14 +215,14 @@ class __TwigTemplate_08fb75772002f86cf9f699655b6a3ce9fa991a9c094ec952225d4119c54
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['unefiche'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 91
+        // line 93
         echo "                            </tbody>
                             <table class=\"table table-bordered\">
                                 <thead>
                                 <tr>
-                                    <th>Total Frais Hor Forfait :</th>
+                                    <th>Total Frais Hors Forfait :</th>
                                     <th>";
-        // line 96
+        // line 98
         echo twig_escape_filter($this->env, (isset($context["total2"]) ? $context["total2"] : $this->getContext($context, "total2")), "html", null, true);
         echo "€</th>
                                 </tr>
@@ -233,39 +235,40 @@ class __TwigTemplate_08fb75772002f86cf9f699655b6a3ce9fa991a9c094ec952225d4119c54
                         <tr>
                             <th>Total Frais :</th>
                             <th>";
-        // line 106
+        // line 108
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["Fiche"]) ? $context["Fiche"] : $this->getContext($context, "Fiche")), "getMontantValide", array(), "method"), "html", null, true);
         echo "€</th>
                         </tr>
                         </thead>
                     </table>
 
+                    <!-- Affichage des justificatifs -->
                     <div class=\"container\">
                         <div class=\"panel\">
                             ";
-        // line 113
+        // line 116
         $context["i"] = 1;
-        // line 114
+        // line 117
         echo "                            ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["Fiche"]) ? $context["Fiche"] : $this->getContext($context, "Fiche")), "getJustificatif", array(), "method"));
         foreach ($context['_seq'] as $context["_key"] => $context["unJusti"]) {
-            // line 115
+            // line 118
             echo "                                <a href=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl(((("Uplaod/Jusificatif/" . $this->getAttribute($context["unJusti"], "getId", array(), "method")) . "/") . $this->getAttribute($context["unJusti"], "getURL", array(), "method"))), "html", null, true);
             echo "\" target=\"_blank\">Justificatif ";
             echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
             echo "</a>
                                 ";
-            // line 116
+            // line 119
             $context["i"] = ((isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")) + 1);
-            // line 117
+            // line 120
             echo "                            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['unJusti'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 118
+        // line 121
         echo "                        </div>
                     </div>
 
@@ -281,7 +284,7 @@ class __TwigTemplate_08fb75772002f86cf9f699655b6a3ce9fa991a9c094ec952225d4119c54
 
 ";
         
-        $__internal_7fff3666604658a3fefcdd6c36f2495651946eda2fcc9ddf974fbc6aecd286bc->leave($__internal_7fff3666604658a3fefcdd6c36f2495651946eda2fcc9ddf974fbc6aecd286bc_prof);
+        $__internal_ae32d078695c5640e03279923b06440201c14c1dc053dc6bb0b23dba403b1e0a->leave($__internal_ae32d078695c5640e03279923b06440201c14c1dc053dc6bb0b23dba403b1e0a_prof);
 
     }
 
@@ -297,7 +300,7 @@ class __TwigTemplate_08fb75772002f86cf9f699655b6a3ce9fa991a9c094ec952225d4119c54
 
     public function getDebugInfo()
     {
-        return array (  269 => 118,  263 => 117,  261 => 116,  254 => 115,  249 => 114,  247 => 113,  237 => 106,  224 => 96,  217 => 91,  208 => 87,  204 => 85,  201 => 84,  199 => 83,  196 => 82,  194 => 81,  190 => 80,  186 => 79,  182 => 78,  179 => 77,  175 => 75,  171 => 73,  168 => 72,  163 => 71,  161 => 70,  140 => 52,  133 => 47,  124 => 43,  120 => 41,  117 => 40,  115 => 39,  112 => 38,  110 => 37,  106 => 36,  102 => 35,  98 => 34,  93 => 33,  89 => 31,  85 => 29,  82 => 28,  77 => 27,  75 => 26,  54 => 10,  48 => 9,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  272 => 121,  266 => 120,  264 => 119,  257 => 118,  252 => 117,  250 => 116,  239 => 108,  226 => 98,  219 => 93,  210 => 89,  206 => 87,  203 => 86,  201 => 85,  198 => 84,  196 => 83,  192 => 82,  188 => 81,  184 => 80,  181 => 79,  177 => 77,  173 => 75,  170 => 74,  165 => 73,  163 => 72,  142 => 54,  135 => 49,  126 => 45,  122 => 43,  119 => 42,  117 => 41,  114 => 40,  112 => 39,  108 => 38,  104 => 37,  100 => 36,  95 => 35,  91 => 33,  87 => 31,  84 => 30,  79 => 29,  77 => 28,  54 => 10,  48 => 9,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends 'TestBundle::layout.html.twig' %}*/
@@ -312,6 +315,8 @@ class __TwigTemplate_08fb75772002f86cf9f699655b6a3ce9fa991a9c094ec952225d4119c54
 /*                     <h1 style="text-align: center;margin-top: 0px;">Fiche Frais {{ Mois }} {{ Annee }}</h1>*/
 /*                 </div>*/
 /*                 <div class="panel-body">*/
+/* */
+/*                     <!-- Affichage des frais forfaits -->*/
 /*                     <h1 style="font-size: 20px;text-align: center">Frais Forfait :</h1>*/
 /*                     <div class="table-responsive">*/
 /*                         <table class="table table-bordered" style="margin: 0px">*/
@@ -356,8 +361,8 @@ class __TwigTemplate_08fb75772002f86cf9f699655b6a3ce9fa991a9c094ec952225d4119c54
 /*                                 </thead>*/
 /*                             </table>*/
 /*                     </div>*/
-/*                     <!-- Tableau Frais Hor Forfait -->*/
-/*                     <h1 style="font-size: 20px;text-align: center">Frais Hor Forfait</h1>*/
+/*                     <!-- Affichage des frais hors forfaits  -->*/
+/*                     <h1 style="font-size: 20px;text-align: center">Frais Hors Forfait</h1>*/
 /*                     <div class="table-responsive">*/
 /*                         <table class="table table-bordered" style="margin: 0px">*/
 /*                             <thead>*/
@@ -394,7 +399,7 @@ class __TwigTemplate_08fb75772002f86cf9f699655b6a3ce9fa991a9c094ec952225d4119c54
 /*                             <table class="table table-bordered">*/
 /*                                 <thead>*/
 /*                                 <tr>*/
-/*                                     <th>Total Frais Hor Forfait :</th>*/
+/*                                     <th>Total Frais Hors Forfait :</th>*/
 /*                                     <th>{{ total2 }}€</th>*/
 /*                                 </tr>*/
 /*                                 </thead>*/
@@ -410,6 +415,7 @@ class __TwigTemplate_08fb75772002f86cf9f699655b6a3ce9fa991a9c094ec952225d4119c54
 /*                         </thead>*/
 /*                     </table>*/
 /* */
+/*                     <!-- Affichage des justificatifs -->*/
 /*                     <div class="container">*/
 /*                         <div class="panel">*/
 /*                             {% set i = 1 %}*/

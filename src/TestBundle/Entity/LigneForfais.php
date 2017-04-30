@@ -49,7 +49,6 @@ class LigneForfais
      * @var \Date
      *
      * @ORM\Column(name="Date", type="date")
-     * @Assert\Callback(methods={"testDateValidite"})
      *
      */
     private $date;
@@ -147,19 +146,6 @@ class LigneForfais
         return $this->date;
     }
 
-    public function testDateValidite(ExecutionContext $context){
-            $DateComp = new DateComparator($this->date->format('d-m-Y'));
-            $DateComp->setOperator(">");
-            $test=new \DateTime();
-            $test->addadd(new \DateInterval('P1M'));
-            if($DateComp->test($test->format('U'))) {
-                $propertyPath = $context->getPropertyPath() . '.dateValidite';
-                $context->setPropertyPath($propertyPath);
-                $context->addViolation('Le frais hor forfais ne peut pas depssaer un an', array(), null);
-            }
-
-
-    }
 
     /**
      * Set fraisForfais

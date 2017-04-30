@@ -18,44 +18,45 @@ class __TwigTemplate_028bcef6791b834d7f526c52f69c8dc1af52bb7d3e3d585490d465a3522
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0e33e2c8b3bde5aa12d9f2c82d57a131e11bce38e23522de8ab1270fc0b6acda = $this->env->getExtension("native_profiler");
-        $__internal_0e33e2c8b3bde5aa12d9f2c82d57a131e11bce38e23522de8ab1270fc0b6acda->enter($__internal_0e33e2c8b3bde5aa12d9f2c82d57a131e11bce38e23522de8ab1270fc0b6acda_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Test/layout.html.twig"));
+        $__internal_360295dbcc49ca3a0122b31c2db83e858d678739063ad0576218a4a7f01bbc22 = $this->env->getExtension("native_profiler");
+        $__internal_360295dbcc49ca3a0122b31c2db83e858d678739063ad0576218a4a7f01bbc22->enter($__internal_360295dbcc49ca3a0122b31c2db83e858d678739063ad0576218a4a7f01bbc22_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Test/layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
 <html>
+<!-- Page Permettent l'import de boostrap dans toute les autres pages mais aussi de l'affichage de la barre de menu  -->
     <head>
         <meta charset=\"UTF-8\" />
         <title>";
-        // line 5
+        // line 6
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
         ";
-        // line 6
-        $this->displayBlock('stylesheets', $context, $blocks);
         // line 7
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 8
         echo "        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
 
         <link rel=\"stylesheet\" href=\"";
-        // line 9
+        // line 10
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/framework/bootstrap/css/bootstrap.css"), "html", null, true);
         echo "\">
         <link rel=\"stylesheet\" href=\"";
-        // line 10
+        // line 11
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/framework/bootstrap/js/jquery.js"), "html", null, true);
         echo "\">
         <link rel=\"stylesheet\" href=\"";
-        // line 11
+        // line 12
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/framework/bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\">
         <link rel=\"stylesheet\" href=\"";
-        // line 12
+        // line 13
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/framework/css/StyleNav.css"), "html", null, true);
         echo "\">
         <link rel=\"stylesheet\" href=\"";
-        // line 13
+        // line 14
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/framework/bootstrap/js/jquery.easing.js"), "html", null, true);
         echo "\">
     </head>
@@ -65,58 +66,58 @@ class __TwigTemplate_028bcef6791b834d7f526c52f69c8dc1af52bb7d3e3d585490d465a3522
                <div class=\"navbar-collapse collapse sidebar-navbar-collapse\">
                    <ul class=\"nav navbar-nav\">
                        <img style=\"max-width: 100%; height: auto;margin-bottom: 50px\" alt=\"logo\" src=\"";
-        // line 20
+        // line 21
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/framework/images/logo3.png"), "html", null, true);
         echo "\">
 
-
+                       <!-- On gère l'affichage de la barre de menu en fonction de quelle utilisateur se connecte -->
                                ";
-        // line 23
+        // line 24
         if ($this->env->getExtension('security')->isGranted("ROLE_UTILISATEUR")) {
-            // line 24
+            // line 25
             echo "
                                    <li id=\"liU\"><a style=\"border-color: transparent\" class=\"btn btn-lg btn-block\" href=\"";
-            // line 25
+            // line 26
             echo $this->env->getExtension('routing')->getPath("test_renseignerfichefrais");
             echo "\">Renseigner Fiche</a></li>
                                    <li id=\"liU\"><a style=\"border-color: transparent\" class=\"btn btn-lg btn-block\" href=\"";
-            // line 26
+            // line 27
             echo $this->env->getExtension('routing')->getPath("test_consulterfichefrais");
             echo "\">Consulter</a></li>
                                ";
         }
-        // line 28
+        // line 29
         echo "
                                ";
-        // line 29
+        // line 30
         if ($this->env->getExtension('security')->isGranted("ROLE_COMPTABLE")) {
-            // line 30
+            // line 31
             echo "
                                    <li id=\"liU\"><a style=\"border-color: transparent\" class=\"btn btn-lg btn-block\" href=\"";
-            // line 31
+            // line 32
             echo $this->env->getExtension('routing')->getPath("test_consulterfichefraisC");
             echo "\">Consulter </a></li>
                                ";
         }
-        // line 33
+        // line 34
         echo "
                        ";
-        // line 34
+        // line 35
         if ($this->env->getExtension('security')->isGranted("ROLE_ADMIN")) {
-            // line 35
+            // line 36
             echo "                           <li id=\"liU\"><a style=\"border-color: transparent\" class=\"btn btn-lg btn-block\" href=\"";
             echo $this->env->getExtension('routing')->getPath("test_addVisiteur");
             echo "\">Ajouter User</a></li>
                            <li id=\"liU\"><a style=\"border-color: transparent\" class=\"btn btn-lg btn-block\" href=\"";
-            // line 36
+            // line 37
             echo $this->env->getExtension('routing')->getPath("test_removeVisiteur");
             echo "\">Supprimer User</a></li>
                        ";
         }
-        // line 38
+        // line 39
         echo "
                                 <li id=\"liD\"><a style=\"border-color: transparent\" class=\"btn btn-lg \" href=\"";
-        // line 39
+        // line 40
         echo $this->env->getExtension('routing')->getPath("user_logout");
         echo "\">Deconnection</a></li>
 
@@ -128,49 +129,49 @@ class __TwigTemplate_028bcef6791b834d7f526c52f69c8dc1af52bb7d3e3d585490d465a3522
 
 
         ";
-        // line 48
-        $this->displayBlock('body', $context, $blocks);
         // line 49
+        $this->displayBlock('body', $context, $blocks);
+        // line 50
         echo "
     </body>
 </html>
 ";
         
-        $__internal_0e33e2c8b3bde5aa12d9f2c82d57a131e11bce38e23522de8ab1270fc0b6acda->leave($__internal_0e33e2c8b3bde5aa12d9f2c82d57a131e11bce38e23522de8ab1270fc0b6acda_prof);
-
-    }
-
-    // line 5
-    public function block_title($context, array $blocks = array())
-    {
-        $__internal_315869b16fb9ce16a021994c4d3420ee94b36d503ca96901139e1e0d3712f2b3 = $this->env->getExtension("native_profiler");
-        $__internal_315869b16fb9ce16a021994c4d3420ee94b36d503ca96901139e1e0d3712f2b3->enter($__internal_315869b16fb9ce16a021994c4d3420ee94b36d503ca96901139e1e0d3712f2b3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
-
-        echo "Welcome!";
-        
-        $__internal_315869b16fb9ce16a021994c4d3420ee94b36d503ca96901139e1e0d3712f2b3->leave($__internal_315869b16fb9ce16a021994c4d3420ee94b36d503ca96901139e1e0d3712f2b3_prof);
+        $__internal_360295dbcc49ca3a0122b31c2db83e858d678739063ad0576218a4a7f01bbc22->leave($__internal_360295dbcc49ca3a0122b31c2db83e858d678739063ad0576218a4a7f01bbc22_prof);
 
     }
 
     // line 6
-    public function block_stylesheets($context, array $blocks = array())
+    public function block_title($context, array $blocks = array())
     {
-        $__internal_5762a9b9b5cc5ce8868194322f61a17001c408704f66663a8c0f77dcad58f6ea = $this->env->getExtension("native_profiler");
-        $__internal_5762a9b9b5cc5ce8868194322f61a17001c408704f66663a8c0f77dcad58f6ea->enter($__internal_5762a9b9b5cc5ce8868194322f61a17001c408704f66663a8c0f77dcad58f6ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_d89ea19c1257d0a69c1223a33f6c7b3a5afb2142e3dd866e3b4d7348dac41c0e = $this->env->getExtension("native_profiler");
+        $__internal_d89ea19c1257d0a69c1223a33f6c7b3a5afb2142e3dd866e3b4d7348dac41c0e->enter($__internal_d89ea19c1257d0a69c1223a33f6c7b3a5afb2142e3dd866e3b4d7348dac41c0e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
+        echo "Welcome!";
         
-        $__internal_5762a9b9b5cc5ce8868194322f61a17001c408704f66663a8c0f77dcad58f6ea->leave($__internal_5762a9b9b5cc5ce8868194322f61a17001c408704f66663a8c0f77dcad58f6ea_prof);
+        $__internal_d89ea19c1257d0a69c1223a33f6c7b3a5afb2142e3dd866e3b4d7348dac41c0e->leave($__internal_d89ea19c1257d0a69c1223a33f6c7b3a5afb2142e3dd866e3b4d7348dac41c0e_prof);
 
     }
 
-    // line 48
-    public function block_body($context, array $blocks = array())
+    // line 7
+    public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_8891bb31061141fcbdd67e6582c08e544b024a631c0c86ad9739c3bc697fd06f = $this->env->getExtension("native_profiler");
-        $__internal_8891bb31061141fcbdd67e6582c08e544b024a631c0c86ad9739c3bc697fd06f->enter($__internal_8891bb31061141fcbdd67e6582c08e544b024a631c0c86ad9739c3bc697fd06f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_87ba99dd73cf2805ae7ed6c7e194c56cacb5c753633ca28ec48b571d8bee6018 = $this->env->getExtension("native_profiler");
+        $__internal_87ba99dd73cf2805ae7ed6c7e194c56cacb5c753633ca28ec48b571d8bee6018->enter($__internal_87ba99dd73cf2805ae7ed6c7e194c56cacb5c753633ca28ec48b571d8bee6018_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         
-        $__internal_8891bb31061141fcbdd67e6582c08e544b024a631c0c86ad9739c3bc697fd06f->leave($__internal_8891bb31061141fcbdd67e6582c08e544b024a631c0c86ad9739c3bc697fd06f_prof);
+        $__internal_87ba99dd73cf2805ae7ed6c7e194c56cacb5c753633ca28ec48b571d8bee6018->leave($__internal_87ba99dd73cf2805ae7ed6c7e194c56cacb5c753633ca28ec48b571d8bee6018_prof);
+
+    }
+
+    // line 49
+    public function block_body($context, array $blocks = array())
+    {
+        $__internal_76abe59fe56938165b495b42e523fb73eb9265e703485def730226bbdcf802ad = $this->env->getExtension("native_profiler");
+        $__internal_76abe59fe56938165b495b42e523fb73eb9265e703485def730226bbdcf802ad->enter($__internal_76abe59fe56938165b495b42e523fb73eb9265e703485def730226bbdcf802ad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+
+        
+        $__internal_76abe59fe56938165b495b42e523fb73eb9265e703485def730226bbdcf802ad->leave($__internal_76abe59fe56938165b495b42e523fb73eb9265e703485def730226bbdcf802ad_prof);
 
     }
 
@@ -186,11 +187,12 @@ class __TwigTemplate_028bcef6791b834d7f526c52f69c8dc1af52bb7d3e3d585490d465a3522
 
     public function getDebugInfo()
     {
-        return array (  167 => 48,  156 => 6,  144 => 5,  134 => 49,  132 => 48,  120 => 39,  117 => 38,  112 => 36,  107 => 35,  105 => 34,  102 => 33,  97 => 31,  94 => 30,  92 => 29,  89 => 28,  84 => 26,  80 => 25,  77 => 24,  75 => 23,  69 => 20,  59 => 13,  55 => 12,  51 => 11,  47 => 10,  43 => 9,  37 => 7,  35 => 6,  31 => 5,  25 => 1,);
+        return array (  168 => 49,  157 => 7,  145 => 6,  135 => 50,  133 => 49,  121 => 40,  118 => 39,  113 => 37,  108 => 36,  106 => 35,  103 => 34,  98 => 32,  95 => 31,  93 => 30,  90 => 29,  85 => 27,  81 => 26,  78 => 25,  76 => 24,  70 => 21,  60 => 14,  56 => 13,  52 => 12,  48 => 11,  44 => 10,  38 => 8,  36 => 7,  32 => 6,  25 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
 /* <html>*/
+/* <!-- Page Permettent l'import de boostrap dans toute les autres pages mais aussi de l'affichage de la barre de menu  -->*/
 /*     <head>*/
 /*         <meta charset="UTF-8" />*/
 /*         <title>{% block title %}Welcome!{% endblock %}</title>*/
@@ -210,7 +212,7 @@ class __TwigTemplate_028bcef6791b834d7f526c52f69c8dc1af52bb7d3e3d585490d465a3522
 /*                    <ul class="nav navbar-nav">*/
 /*                        <img style="max-width: 100%; height: auto;margin-bottom: 50px" alt="logo" src="{{ asset('bundles/framework/images/logo3.png') }}">*/
 /* */
-/* */
+/*                        <!-- On gère l'affichage de la barre de menu en fonction de quelle utilisateur se connecte -->*/
 /*                                {%  if is_granted('ROLE_UTILISATEUR')%}*/
 /* */
 /*                                    <li id="liU"><a style="border-color: transparent" class="btn btn-lg btn-block" href="{{  path('test_renseignerfichefrais') }}">Renseigner Fiche</a></li>*/

@@ -22,23 +22,23 @@ class __TwigTemplate_9b9c42ffceefd8898e9297d2cd56bdb48ce6d50e61153b1b775b6417267
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_190aae100d978f5b00816483f1fe464f350b6ebee8919f7a14ae95aa9b2d0a02 = $this->env->getExtension("native_profiler");
-        $__internal_190aae100d978f5b00816483f1fe464f350b6ebee8919f7a14ae95aa9b2d0a02->enter($__internal_190aae100d978f5b00816483f1fe464f350b6ebee8919f7a14ae95aa9b2d0a02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Test/Default/ConsulterC.html.twig"));
+        $__internal_5c04327c10bd42edffe0553f3371d4b704342fc2e84331695798306ecf7a2363 = $this->env->getExtension("native_profiler");
+        $__internal_5c04327c10bd42edffe0553f3371d4b704342fc2e84331695798306ecf7a2363->enter($__internal_5c04327c10bd42edffe0553f3371d4b704342fc2e84331695798306ecf7a2363_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Test/Default/ConsulterC.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_190aae100d978f5b00816483f1fe464f350b6ebee8919f7a14ae95aa9b2d0a02->leave($__internal_190aae100d978f5b00816483f1fe464f350b6ebee8919f7a14ae95aa9b2d0a02_prof);
+        $__internal_5c04327c10bd42edffe0553f3371d4b704342fc2e84331695798306ecf7a2363->leave($__internal_5c04327c10bd42edffe0553f3371d4b704342fc2e84331695798306ecf7a2363_prof);
 
     }
 
     // line 3
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_0585be72b2d48e27cf06316fbab616d5dcfb5ab04cd1b27db3301e20f60f2619 = $this->env->getExtension("native_profiler");
-        $__internal_0585be72b2d48e27cf06316fbab616d5dcfb5ab04cd1b27db3301e20f60f2619->enter($__internal_0585be72b2d48e27cf06316fbab616d5dcfb5ab04cd1b27db3301e20f60f2619_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_83fbaf10d2065f26e2b19944cdc4bc69acba1d49df22d21ce1f66d8136aa1d1c = $this->env->getExtension("native_profiler");
+        $__internal_83fbaf10d2065f26e2b19944cdc4bc69acba1d49df22d21ce1f66d8136aa1d1c->enter($__internal_83fbaf10d2065f26e2b19944cdc4bc69acba1d49df22d21ce1f66d8136aa1d1c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
-        echo "
+        echo "<!-- Page Listant les fiches en fonction de la recherche du comptable -->
 
 
 <link rel=\"stylesheet\" href=\"";
@@ -85,18 +85,18 @@ class __TwigTemplate_9b9c42ffceefd8898e9297d2cd56bdb48ce6d50e61153b1b775b6417267
 
 ";
         
-        $__internal_0585be72b2d48e27cf06316fbab616d5dcfb5ab04cd1b27db3301e20f60f2619->leave($__internal_0585be72b2d48e27cf06316fbab616d5dcfb5ab04cd1b27db3301e20f60f2619_prof);
+        $__internal_83fbaf10d2065f26e2b19944cdc4bc69acba1d49df22d21ce1f66d8136aa1d1c->leave($__internal_83fbaf10d2065f26e2b19944cdc4bc69acba1d49df22d21ce1f66d8136aa1d1c_prof);
 
     }
 
     // line 23
     public function block_body($context, array $blocks = array())
     {
-        $__internal_e95f03bb8ba3d1875d780ebc5e5657c1486add6166fbd35355df8f34c91d5401 = $this->env->getExtension("native_profiler");
-        $__internal_e95f03bb8ba3d1875d780ebc5e5657c1486add6166fbd35355df8f34c91d5401->enter($__internal_e95f03bb8ba3d1875d780ebc5e5657c1486add6166fbd35355df8f34c91d5401_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_52d5e034e21ee36007cdfc6ae23d7988c75cfc9e33d8d789b755cb31e097536e = $this->env->getExtension("native_profiler");
+        $__internal_52d5e034e21ee36007cdfc6ae23d7988c75cfc9e33d8d789b755cb31e097536e->enter($__internal_52d5e034e21ee36007cdfc6ae23d7988c75cfc9e33d8d789b755cb31e097536e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 24
-        echo "
+        echo "    <!-- Création du formulaire de recherche -->
     <div class=\"row\" style=\"margin-left: 0px;margin-right: 0px;margin-top: 40px;\" >
         <div class=\"col-md-offset-3 col-lg-8\">
             ";
@@ -157,7 +157,7 @@ class __TwigTemplate_9b9c42ffceefd8898e9297d2cd56bdb48ce6d50e61153b1b775b6417267
 
                 </div>
                 <div class=\"panel-body\">
-
+<!-- Affichage du résultat de la recherche -->
                     ";
         // line 57
         if ((((isset($context["resultat"]) ? $context["resultat"] : $this->getContext($context, "resultat")) == null) && ((isset($context["Recherche"]) ? $context["Recherche"] : $this->getContext($context, "Recherche")) != false))) {
@@ -262,7 +262,7 @@ class __TwigTemplate_9b9c42ffceefd8898e9297d2cd56bdb48ce6d50e61153b1b775b6417267
 
 ";
         
-        $__internal_e95f03bb8ba3d1875d780ebc5e5657c1486add6166fbd35355df8f34c91d5401->leave($__internal_e95f03bb8ba3d1875d780ebc5e5657c1486add6166fbd35355df8f34c91d5401_prof);
+        $__internal_52d5e034e21ee36007cdfc6ae23d7988c75cfc9e33d8d789b755cb31e097536e->leave($__internal_52d5e034e21ee36007cdfc6ae23d7988c75cfc9e33d8d789b755cb31e097536e_prof);
 
     }
 
@@ -284,7 +284,7 @@ class __TwigTemplate_9b9c42ffceefd8898e9297d2cd56bdb48ce6d50e61153b1b775b6417267
 /* {% extends 'TestBundle::layout.html.twig' %}*/
 /* */
 /* {% block stylesheets %}*/
-/* */
+/* <!-- Page Listant les fiches en fonction de la recherche du comptable -->*/
 /* */
 /* */
 /* <link rel="stylesheet" href="{{ asset('bundles/framework/bootstrap/css/bootstrap.min.css') }}">*/
@@ -304,7 +304,7 @@ class __TwigTemplate_9b9c42ffceefd8898e9297d2cd56bdb48ce6d50e61153b1b775b6417267
 /* */
 /* {% endblock stylesheets %}*/
 /* {% block body %}*/
-/* */
+/*     <!-- Création du formulaire de recherche -->*/
 /*     <div class="row" style="margin-left: 0px;margin-right: 0px;margin-top: 40px;" >*/
 /*         <div class="col-md-offset-3 col-lg-8">*/
 /*             {% form_theme form 'bootstrap_3_layout.html.twig' %}*/
@@ -336,7 +336,7 @@ class __TwigTemplate_9b9c42ffceefd8898e9297d2cd56bdb48ce6d50e61153b1b775b6417267
 /* */
 /*                 </div>*/
 /*                 <div class="panel-body">*/
-/* */
+/* <!-- Affichage du résultat de la recherche -->*/
 /*                     {% if (resultat == null and Recherche != false) %}*/
 /*                         <h1 style="text-align: center;background-color: #f2dede;color: #b94a48;">Aucun résultat</h1>*/
 /*                     {% else %}*/

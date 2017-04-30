@@ -23,27 +23,27 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_78c1bf7ed922cf5eeb5d9e2666430a9ec16fb529284083627f230fe3e8d42e79 = $this->env->getExtension("native_profiler");
-        $__internal_78c1bf7ed922cf5eeb5d9e2666430a9ec16fb529284083627f230fe3e8d42e79->enter($__internal_78c1bf7ed922cf5eeb5d9e2666430a9ec16fb529284083627f230fe3e8d42e79_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TestBundle:Default:RenseignerFicheFrais.html.twig"));
+        $__internal_1cca9d9ef3ab814ec01784c1a5753862cd236be6620e932116834becadf3deb9 = $this->env->getExtension("native_profiler");
+        $__internal_1cca9d9ef3ab814ec01784c1a5753862cd236be6620e932116834becadf3deb9->enter($__internal_1cca9d9ef3ab814ec01784c1a5753862cd236be6620e932116834becadf3deb9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TestBundle:Default:RenseignerFicheFrais.html.twig"));
 
         // line 2
         $context["i"] = 1;
         // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_78c1bf7ed922cf5eeb5d9e2666430a9ec16fb529284083627f230fe3e8d42e79->leave($__internal_78c1bf7ed922cf5eeb5d9e2666430a9ec16fb529284083627f230fe3e8d42e79_prof);
+        $__internal_1cca9d9ef3ab814ec01784c1a5753862cd236be6620e932116834becadf3deb9->leave($__internal_1cca9d9ef3ab814ec01784c1a5753862cd236be6620e932116834becadf3deb9_prof);
 
     }
 
     // line 3
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_c6b370452a41c0697f7cecc7ed65e9d284bcd0b6b852c35e7b89247dae04d2f6 = $this->env->getExtension("native_profiler");
-        $__internal_c6b370452a41c0697f7cecc7ed65e9d284bcd0b6b852c35e7b89247dae04d2f6->enter($__internal_c6b370452a41c0697f7cecc7ed65e9d284bcd0b6b852c35e7b89247dae04d2f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_9d3529e02b1b43609f5544bb88d2870a00034f412da41657907e4dbf0566770b = $this->env->getExtension("native_profiler");
+        $__internal_9d3529e02b1b43609f5544bb88d2870a00034f412da41657907e4dbf0566770b->enter($__internal_9d3529e02b1b43609f5544bb88d2870a00034f412da41657907e4dbf0566770b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
         echo "
-
+<!-- ¨Page pour renseigner les frais forfait et hors forfait -->
 
     <link rel=\"stylesheet\" href=\"";
         // line 7
@@ -130,19 +130,20 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 
             var val;
 
+            //Vérification que tous les champs son bien remplie lorsque l'utilisateur click sur sauvegarder
             \$('#fiche_frais_Sauvegarder').click(function (event) {
 
                 \$('.erreur').remove();
                 var Datej = ";
-        // line 59
+        // line 60
         echo twig_escape_filter($this->env, (isset($context["Datej"]) ? $context["Datej"] : $this->getContext($context, "Datej")), "html", null, true);
         echo ";
                 var Datem = ";
-        // line 60
+        // line 61
         echo twig_escape_filter($this->env, (isset($context["Datem"]) ? $context["Datem"] : $this->getContext($context, "Datem")), "html", null, true);
         echo ";
                 var Datey = ";
-        // line 61
+        // line 62
         echo twig_escape_filter($this->env, (isset($context["Datey"]) ? $context["Datey"] : $this->getContext($context, "Datey")), "html", null, true);
         echo ";
 
@@ -152,7 +153,7 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
                 var bon2 = true;
 
 
-
+                //Vérification ligne hors forfait
                 for (var i=0;i<LigneHCount;i++){
 
                     \$nb = LigneHTab[i];
@@ -218,6 +219,7 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
                         \$('#TitreH'+\$nb).css(\"color\",\"9d9d9d\");
                     }
                 }
+                //Vérification ligne forfait
                 for (var i=0;i<LigneFCount;i++){
                     \$nb = LigneFTab[i];
 
@@ -298,6 +300,7 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 
 
             });
+
 
             function VeriNombre(source)
             {
@@ -441,7 +444,7 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
                 addDeleteLink3(test,\$nb);
             }
 
-            // La fonction qui ajoute Une Ligne Hor Forfait
+            // La fonction qui ajoute Une Ligne Hors Forfait
             function addCategory2() {
                 var emailList = jQuery('#toutH');
                 LigneHCount ++;
@@ -564,31 +567,31 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
     </script>
 ";
         
-        $__internal_c6b370452a41c0697f7cecc7ed65e9d284bcd0b6b852c35e7b89247dae04d2f6->leave($__internal_c6b370452a41c0697f7cecc7ed65e9d284bcd0b6b852c35e7b89247dae04d2f6_prof);
+        $__internal_9d3529e02b1b43609f5544bb88d2870a00034f412da41657907e4dbf0566770b->leave($__internal_9d3529e02b1b43609f5544bb88d2870a00034f412da41657907e4dbf0566770b_prof);
 
     }
 
-    // line 480
+    // line 483
     public function block_title($context, array $blocks = array())
     {
-        $__internal_cab374a5bbad69c9a38648a19fcd8e523f6a6bdcc6ca891118348d814a72d032 = $this->env->getExtension("native_profiler");
-        $__internal_cab374a5bbad69c9a38648a19fcd8e523f6a6bdcc6ca891118348d814a72d032->enter($__internal_cab374a5bbad69c9a38648a19fcd8e523f6a6bdcc6ca891118348d814a72d032_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_c17132617d2188fdc0bfe9dabd8df2434c624971dc34d4940656c85a85410c77 = $this->env->getExtension("native_profiler");
+        $__internal_c17132617d2188fdc0bfe9dabd8df2434c624971dc34d4940656c85a85410c77->enter($__internal_c17132617d2188fdc0bfe9dabd8df2434c624971dc34d4940656c85a85410c77_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Ajout Fiche Frais";
         
-        $__internal_cab374a5bbad69c9a38648a19fcd8e523f6a6bdcc6ca891118348d814a72d032->leave($__internal_cab374a5bbad69c9a38648a19fcd8e523f6a6bdcc6ca891118348d814a72d032_prof);
+        $__internal_c17132617d2188fdc0bfe9dabd8df2434c624971dc34d4940656c85a85410c77->leave($__internal_c17132617d2188fdc0bfe9dabd8df2434c624971dc34d4940656c85a85410c77_prof);
 
     }
 
-    // line 481
+    // line 484
     public function block_body($context, array $blocks = array())
     {
-        $__internal_38f9257ca19cc816b850292a643e171b9576499ca7bdd09b1722a78ab6be6b65 = $this->env->getExtension("native_profiler");
-        $__internal_38f9257ca19cc816b850292a643e171b9576499ca7bdd09b1722a78ab6be6b65->enter($__internal_38f9257ca19cc816b850292a643e171b9576499ca7bdd09b1722a78ab6be6b65_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_6395cdfa66009bd4ac84f76b92469a96f7efeb12e9d5284a0ebbae8ceef224f4 = $this->env->getExtension("native_profiler");
+        $__internal_6395cdfa66009bd4ac84f76b92469a96f7efeb12e9d5284a0ebbae8ceef224f4->enter($__internal_6395cdfa66009bd4ac84f76b92469a96f7efeb12e9d5284a0ebbae8ceef224f4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 482
+        // line 485
         echo "
-    <!--Jquery Fenetre Dialog -->
+    <!--Jquery Fenêtre Dialogue Suppression frais forfait -->
     <div id=\"dialog-confirm\" title=\"Confirmation de la suppression\" style=\"display:none;\">
         <p>
             <span class=\"ui-icon ui-icon-alert\" style=\"float:left; margin:0 7px 20px 0;\"></span>
@@ -596,14 +599,15 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
         </p>
     </div>
 
-    <!--Jquery Fenetre Dialog -->
+    <!--Jquery Fenêtre Dialogue Suppression frais hors forfait -->
     <div id=\"dialog-confirm2\" title=\"Confirmation de la suppression\" style=\"display:none;\">
         <p>
             <span class=\"ui-icon ui-icon-alert\" style=\"float:left; margin:0 7px 20px 0;\"></span>
             Etes-vous sûr de vouloir supprimer cet élément ?
         </p>
     </div>
-    <!--Jquery Fenetre Dialog -->
+
+    <!-- Jquery Fenêtre Dialogue Suppression justificatif -->
     <div id=\"dialog-confirm3\" title=\"Confirmation de la suppression\" style=\"display:none;\">
         <p>
             <span class=\"ui-icon ui-icon-alert\" style=\"float:left; margin:0 7px 20px 0;\"></span>
@@ -611,28 +615,28 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
         </p>
     </div>
     ";
-        // line 505
+        // line 509
         $this->env->getExtension('form')->renderer->setTheme((isset($context["form1"]) ? $context["form1"] : $this->getContext($context, "form1")), array(0 => "bootstrap_3_layout.html.twig"));
-        // line 506
+        // line 510
         echo "
     <div class=\"row \" style=\"margin-left: 0px;margin-right: 0px;\">
         <div class=\"col-md-offset-3 col-md-8\" style=\"padding-top: 20px\">
             <div class=\"panel panel-default\">
                 <div class=\"panel-heading\">
                     <h1 style=\"margin-top: 5px;margin-bottom: 0px\">Fiche Frais de ";
-        // line 511
+        // line 515
         echo twig_escape_filter($this->env, (isset($context["DateMois"]) ? $context["DateMois"] : $this->getContext($context, "DateMois")), "html", null, true);
         echo " ";
         echo twig_escape_filter($this->env, (isset($context["DateAnne"]) ? $context["DateAnne"] : $this->getContext($context, "DateAnne")), "html", null, true);
         echo "</h1>
                     <p style=\"margin-top: 0px;text-align: left;margin-bottom: 5px\">Montant Valide : ";
-        // line 512
+        // line 516
         echo twig_escape_filter($this->env, (isset($context["MontantValide"]) ? $context["MontantValide"] : $this->getContext($context, "MontantValide")), "html", null, true);
         echo " €</p>
                 </div>
                 <div class=\"panel-body\">
                     ";
-        // line 515
+        // line 519
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form1"]) ? $context["form1"] : $this->getContext($context, "form1")), 'form_start');
         echo "
 
@@ -642,9 +646,10 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 
                         </div>
 
+                        <!-- Affichage des frais forfaits déjà sauvegarder plus affichage du formulaire pour en sauvegarder des nouveaux -->
                         <div class=\"panel-body\" style=\"max-height: 230px;min-height: 230px; overflow-y:scroll;\">
                             <div id=\"tout\" date-prototype=\"";
-        // line 524
+        // line 529
         echo twig_escape_filter($this->env, $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form1"]) ? $context["form1"] : $this->getContext($context, "form1")), "LigneForFais", array()), "vars", array()), "prototype", array()), "date", array()), 'widget'), "html_attr");
         echo "\" quantite-prototype=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form1"]) ? $context["form1"] : $this->getContext($context, "form1")), "LigneForFais", array()), "vars", array()), "prototype", array()), "quantite", array()), 'widget'), "html_attr");
@@ -652,18 +657,18 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
         echo twig_escape_filter($this->env, $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form1"]) ? $context["form1"] : $this->getContext($context, "form1")), "LigneForFais", array()), "vars", array()), "prototype", array()), "FraisForfais", array()), 'widget'), "html_attr");
         echo "\">
                                 ";
-        // line 525
+        // line 530
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["form1"]) ? $context["form1"] : $this->getContext($context, "form1")), "LigneForFais", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["UneLigne"]) {
-            // line 526
+            // line 531
             echo "                                    <div class=\"form-group\" id=\"F";
             echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
             echo "\" style=\"margin-bottom: 5px;\">
                                         <div class=\"row\" style=\"margin: auto\">
                                             <div class=\"col-md-1\">
                                                 <h1 style=\"margin-top: 0px\" id=\"TitreF";
-            // line 529
+            // line 534
             echo twig_escape_filter($this->env, ((isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")) - 1), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
@@ -671,31 +676,31 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
                                             </div>
                                             <div class=\"col-md-2\">
                                                 ";
-            // line 532
+            // line 537
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["UneLigne"], "FraisForfais", array()), 'widget');
             echo "
                                             </div>
                                             <div class=\"col-md-3\">
                                                 ";
-            // line 535
+            // line 540
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["UneLigne"], "quantite", array()), 'widget', array("attr" => array("style" => "text-align: left")));
             echo "
                                             </div>
                                             <div class=\"col-md-4\">
                                                 ";
-            // line 538
+            // line 543
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["UneLigne"], "date", array()), 'widget');
             echo "
                                                 <div id=\"DeBug\" class=\"hidden\">
                                                 ";
-            // line 540
+            // line 545
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["UneLigne"], "valide", array()), 'widget', array("attr" => array("class" => "hidden")));
             echo "
                                                 </div>
                                             </div>
                                             <div class=\"col-md-2\">
                                                 <button  name=\"";
-            // line 544
+            // line 549
             echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
             echo "\" class=\"supF btn btn-danger\" >Supprimer</button>
                                             </div>
@@ -703,15 +708,15 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 
                                     </div>
                                     ";
-            // line 549
+            // line 554
             $context["i"] = ((isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")) + 1);
-            // line 550
+            // line 555
             echo "                                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['UneLigne'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 551
+        // line 556
         echo "                            </div>
                         </div>
                         <div class=\"panel-footer\">
@@ -720,15 +725,16 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
                     </div>
 
 
+                    <!-- Affichage des frais hors forfaits déjà sauvegarder plus affichage du formulaire pour en sauvegarder des nouveaux -->
                     <div class=\"panel panel-default\" style=\"color: #9d9d9d;background-color: #3c3c3c\">
                         <div class=\"panel-heading\" style=\"color: #9d9d9d; background-color: #3c3c3c\">
                             <h2 style=\"font-size: 20px; padding: 0px;margin: 0px;\" id=\"InfoH\">Frais Hors Forfait : </h2>
                         </div>
                         <div class=\"panel-body\" style=\"max-height: 230px;min-height: 230px; overflow-y:scroll;\">
                             ";
-        // line 564
+        // line 570
         $context["i"] = 1;
-        // line 565
+        // line 571
         echo "                            <div id=\"toutH\" libelle-proto=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form1"]) ? $context["form1"] : $this->getContext($context, "form1")), "LigneHorForFait", array()), "vars", array()), "prototype", array()), "libelle", array()), 'widget'), "html_attr");
         echo "\" date-proto=\"";
@@ -737,18 +743,18 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
         echo twig_escape_filter($this->env, $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form1"]) ? $context["form1"] : $this->getContext($context, "form1")), "LigneHorForFait", array()), "vars", array()), "prototype", array()), "montant", array()), 'widget'), "html_attr");
         echo "\">
                                 ";
-        // line 566
+        // line 572
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["form1"]) ? $context["form1"] : $this->getContext($context, "form1")), "LigneHorForFait", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["UneLigne"]) {
-            // line 567
+            // line 573
             echo "                                    <div class=\"form-group\" id=\"H";
             echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
             echo "\" style=\"margin-bottom: 5px;\">
                                         <div class=\"row\" style=\"margin: auto\">
                                             <div class=\"col-md-1\">
                                                 <h1 style=\"margin-top: 0px\" id=\"TitreH";
-            // line 570
+            // line 576
             echo twig_escape_filter($this->env, ((isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")) - 1), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
@@ -756,54 +762,54 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
                                             </div>
                                             <div class=\"col-md-2\">
                                                 ";
-            // line 573
+            // line 579
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["UneLigne"], "montant", array()), 'widget');
             echo "
                                             </div>
                                             <div class=\"col-md-3\">
                                                 ";
-            // line 576
+            // line 582
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["UneLigne"], "libelle", array()), 'errors');
             echo "
                                                 ";
-            // line 577
+            // line 583
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["UneLigne"], "libelle", array()), 'widget', array("attr" => array("style" => "text-align: left")));
             echo "
                                             </div>
                                             <div class=\"col-md-4\">
                                                 ";
-            // line 580
+            // line 586
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["UneLigne"], "date", array()), 'widget');
             echo "
                                                 <div id=\"DeBug\" class=\"hidden\">
                                                 ";
-            // line 582
+            // line 588
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["UneLigne"], "valide", array()), 'widget', array("attr" => array("class" => "hidden")));
             echo "
                                                     </div>
                                             </div>
                                             <div class=\"col-md-2\">
                                                 <button  name=\"";
-            // line 586
+            // line 592
             echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
             echo "\" class=\"supH btn btn-danger\" >Supprimer</button>
                                             </div>
                                         </div>
                                     </div>
                                     ";
-            // line 590
+            // line 596
             $context["i"] = ((isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")) + 1);
-            // line 591
+            // line 597
             echo "                                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['UneLigne'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 592
+        // line 598
         echo "                            </div>
                         </div>
                         <div class=\"panel-footer\">
-                            <button href=\"#\" class=\"btn btn-success\" id=\"addLH\" style=\"margin-bottom: 0px;margin-left: 5px\">Ajout Frais Hor Forfait</button>
+                            <button href=\"#\" class=\"btn btn-success\" id=\"addLH\" style=\"margin-bottom: 0px;margin-left: 5px\">Ajout Frais Hors Forfait</button>
                         </div>
 
                     </div>
@@ -814,27 +820,28 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 
                         </div>
                         ";
-        // line 605
+        // line 611
         $context["i"] = 1;
-        // line 606
-        echo "                        <div class=\"panel-body\" style=\"max-height: 230px;min-height: 230px; overflow-y:scroll;\">
+        // line 612
+        echo "                        <!-- Affichage des justificatifs déjà sauvegarder plus affichage du formulaire pour en sauvegarder des nouveaux -->
+                        <div class=\"panel-body\" style=\"max-height: 230px;min-height: 230px; overflow-y:scroll;\">
                             <div id=\"toutJ\" URL-prototype=\"";
-        // line 607
+        // line 614
         echo twig_escape_filter($this->env, $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form1"]) ? $context["form1"] : $this->getContext($context, "form1")), "justificatif", array()), "vars", array()), "prototype", array()), "File", array()), 'widget'), "html_attr");
         echo "\">
                                 ";
-        // line 608
+        // line 615
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["LesJustificatif"]) ? $context["LesJustificatif"] : $this->getContext($context, "LesJustificatif")));
         foreach ($context['_seq'] as $context["_key"] => $context["UneLigne"]) {
-            // line 609
+            // line 616
             echo "                                    <div class=\"form-group\" id=\"J";
             echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
             echo "\" style=\"margin-bottom: 5px;\">
                                         <div class=\"row\" style=\"margin: auto\">
                                             <div class=\"col-md-1\">
                                                 <h1 style=\"margin-top: 0px\" id=\"TitreJ";
-            // line 612
+            // line 619
             echo twig_escape_filter($this->env, ((isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")) - 1), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
@@ -842,11 +849,11 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
                                             </div>
                                             <div class=\"col-md-9\" style=\"text-align: center;margin-top: 7px\">
                                                 ";
-            // line 615
+            // line 622
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form1"]) ? $context["form1"] : $this->getContext($context, "form1")), "justificatif", array()), ((isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")) - 1), array(), "array"), "File", array()), 'widget', array("attr" => array("class" => "hidden")));
             echo "
                                                 <a  href=\"";
-            // line 616
+            // line 623
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl(((("Uplaod/Jusificatif/" . $this->getAttribute($context["UneLigne"], "getId", array(), "method")) . "/") . $this->getAttribute($context["UneLigne"], "getURL", array(), "method"))), "html", null, true);
             echo "\" target=\"_blank\">Voir Justificatif ";
             echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
@@ -855,7 +862,7 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 
                                             <div class=\"col-md-2\">
                                                 <button  name=\"";
-            // line 620
+            // line 627
             echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
             echo "\" class=\"supJ btn btn-danger\" >Supprimer</button>
                                             </div>
@@ -863,15 +870,15 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 
                                     </div>
                                     ";
-            // line 625
+            // line 632
             $context["i"] = ((isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")) + 1);
-            // line 626
+            // line 633
             echo "                                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['UneLigne'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 627
+        // line 634
         echo "                            </div>
                         </div>
                         <div class=\"panel-footer\">
@@ -884,12 +891,12 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
                 <div class=\"panel-footer\">
                     <div class=\"form-group\" style=\"margin: 0px;padding: 0px\">
                         ";
-        // line 638
+        // line 645
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form1"]) ? $context["form1"] : $this->getContext($context, "form1")), "Sauvegarder", array()), 'widget');
         echo "
                         <div id=\"DeBug\" class=\"hidden\">
                             ";
-        // line 640
+        // line 647
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form1"]) ? $context["form1"] : $this->getContext($context, "form1")), 'form_end');
         echo "
                             </div>
@@ -904,7 +911,7 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 
 ";
         
-        $__internal_38f9257ca19cc816b850292a643e171b9576499ca7bdd09b1722a78ab6be6b65->leave($__internal_38f9257ca19cc816b850292a643e171b9576499ca7bdd09b1722a78ab6be6b65_prof);
+        $__internal_6395cdfa66009bd4ac84f76b92469a96f7efeb12e9d5284a0ebbae8ceef224f4->leave($__internal_6395cdfa66009bd4ac84f76b92469a96f7efeb12e9d5284a0ebbae8ceef224f4_prof);
 
     }
 
@@ -920,14 +927,14 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 
     public function getDebugInfo()
     {
-        return array (  893 => 640,  888 => 638,  875 => 627,  869 => 626,  867 => 625,  859 => 620,  850 => 616,  846 => 615,  838 => 612,  831 => 609,  827 => 608,  823 => 607,  820 => 606,  818 => 605,  803 => 592,  797 => 591,  795 => 590,  788 => 586,  781 => 582,  776 => 580,  770 => 577,  766 => 576,  760 => 573,  752 => 570,  745 => 567,  741 => 566,  732 => 565,  730 => 564,  715 => 551,  709 => 550,  707 => 549,  699 => 544,  692 => 540,  687 => 538,  681 => 535,  675 => 532,  667 => 529,  660 => 526,  656 => 525,  648 => 524,  636 => 515,  630 => 512,  624 => 511,  617 => 506,  615 => 505,  590 => 482,  584 => 481,  572 => 480,  146 => 61,  142 => 60,  138 => 59,  115 => 39,  111 => 38,  107 => 37,  87 => 20,  82 => 18,  77 => 16,  73 => 15,  69 => 14,  64 => 12,  59 => 10,  55 => 9,  50 => 7,  45 => 4,  39 => 3,  32 => 1,  30 => 2,  11 => 1,);
+        return array (  900 => 647,  895 => 645,  882 => 634,  876 => 633,  874 => 632,  866 => 627,  857 => 623,  853 => 622,  845 => 619,  838 => 616,  834 => 615,  830 => 614,  826 => 612,  824 => 611,  809 => 598,  803 => 597,  801 => 596,  794 => 592,  787 => 588,  782 => 586,  776 => 583,  772 => 582,  766 => 579,  758 => 576,  751 => 573,  747 => 572,  738 => 571,  736 => 570,  720 => 556,  714 => 555,  712 => 554,  704 => 549,  697 => 545,  692 => 543,  686 => 540,  680 => 537,  672 => 534,  665 => 531,  661 => 530,  653 => 529,  640 => 519,  634 => 516,  628 => 515,  621 => 510,  619 => 509,  593 => 485,  587 => 484,  575 => 483,  147 => 62,  143 => 61,  139 => 60,  115 => 39,  111 => 38,  107 => 37,  87 => 20,  82 => 18,  77 => 16,  73 => 15,  69 => 14,  64 => 12,  59 => 10,  55 => 9,  50 => 7,  45 => 4,  39 => 3,  32 => 1,  30 => 2,  11 => 1,);
     }
 }
 /* {% extends 'TestBundle::layout.html.twig' %}*/
 /* {% set i = 1 %}*/
 /* {% block stylesheets %}*/
 /* */
-/* */
+/* <!-- ¨Page pour renseigner les frais forfait et hors forfait -->*/
 /* */
 /*     <link rel="stylesheet" href="{{ asset('bundles/framework/bootstrap/css/bootstrap.min.css') }}">*/
 /* */
@@ -978,6 +985,7 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 /* */
 /*             var val;*/
 /* */
+/*             //Vérification que tous les champs son bien remplie lorsque l'utilisateur click sur sauvegarder*/
 /*             $('#fiche_frais_Sauvegarder').click(function (event) {*/
 /* */
 /*                 $('.erreur').remove();*/
@@ -991,7 +999,7 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 /*                 var bon2 = true;*/
 /* */
 /* */
-/* */
+/*                 //Vérification ligne hors forfait*/
 /*                 for (var i=0;i<LigneHCount;i++){*/
 /* */
 /*                     $nb = LigneHTab[i];*/
@@ -1057,6 +1065,7 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 /*                         $('#TitreH'+$nb).css("color","9d9d9d");*/
 /*                     }*/
 /*                 }*/
+/*                 //Vérification ligne forfait*/
 /*                 for (var i=0;i<LigneFCount;i++){*/
 /*                     $nb = LigneFTab[i];*/
 /* */
@@ -1137,6 +1146,7 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 /* */
 /* */
 /*             });*/
+/* */
 /* */
 /*             function VeriNombre(source)*/
 /*             {*/
@@ -1280,7 +1290,7 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 /*                 addDeleteLink3(test,$nb);*/
 /*             }*/
 /* */
-/*             // La fonction qui ajoute Une Ligne Hor Forfait*/
+/*             // La fonction qui ajoute Une Ligne Hors Forfait*/
 /*             function addCategory2() {*/
 /*                 var emailList = jQuery('#toutH');*/
 /*                 LigneHCount ++;*/
@@ -1405,7 +1415,7 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 /* {% block title %}Ajout Fiche Frais{% endblock %}*/
 /* {% block body %}*/
 /* */
-/*     <!--Jquery Fenetre Dialog -->*/
+/*     <!--Jquery Fenêtre Dialogue Suppression frais forfait -->*/
 /*     <div id="dialog-confirm" title="Confirmation de la suppression" style="display:none;">*/
 /*         <p>*/
 /*             <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>*/
@@ -1413,14 +1423,15 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 /*         </p>*/
 /*     </div>*/
 /* */
-/*     <!--Jquery Fenetre Dialog -->*/
+/*     <!--Jquery Fenêtre Dialogue Suppression frais hors forfait -->*/
 /*     <div id="dialog-confirm2" title="Confirmation de la suppression" style="display:none;">*/
 /*         <p>*/
 /*             <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>*/
 /*             Etes-vous sûr de vouloir supprimer cet élément ?*/
 /*         </p>*/
 /*     </div>*/
-/*     <!--Jquery Fenetre Dialog -->*/
+/* */
+/*     <!-- Jquery Fenêtre Dialogue Suppression justificatif -->*/
 /*     <div id="dialog-confirm3" title="Confirmation de la suppression" style="display:none;">*/
 /*         <p>*/
 /*             <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>*/
@@ -1445,6 +1456,7 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 /* */
 /*                         </div>*/
 /* */
+/*                         <!-- Affichage des frais forfaits déjà sauvegarder plus affichage du formulaire pour en sauvegarder des nouveaux -->*/
 /*                         <div class="panel-body" style="max-height: 230px;min-height: 230px; overflow-y:scroll;">*/
 /*                             <div id="tout" date-prototype="{{ form_widget(form1.LigneForFais.vars.prototype.date)|e('html_attr')}}" quantite-prototype="{{ form_widget(form1.LigneForFais.vars.prototype.quantite)|e('html_attr') }}" Fraisforfait-prototype="{{ form_widget(form1.LigneForFais.vars.prototype.FraisForfais)|e('html_attr') }}">*/
 /*                                 {% for UneLigne in form1.LigneForFais %}*/
@@ -1481,6 +1493,7 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 /*                     </div>*/
 /* */
 /* */
+/*                     <!-- Affichage des frais hors forfaits déjà sauvegarder plus affichage du formulaire pour en sauvegarder des nouveaux -->*/
 /*                     <div class="panel panel-default" style="color: #9d9d9d;background-color: #3c3c3c">*/
 /*                         <div class="panel-heading" style="color: #9d9d9d; background-color: #3c3c3c">*/
 /*                             <h2 style="font-size: 20px; padding: 0px;margin: 0px;" id="InfoH">Frais Hors Forfait : </h2>*/
@@ -1517,7 +1530,7 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 /*                             </div>*/
 /*                         </div>*/
 /*                         <div class="panel-footer">*/
-/*                             <button href="#" class="btn btn-success" id="addLH" style="margin-bottom: 0px;margin-left: 5px">Ajout Frais Hor Forfait</button>*/
+/*                             <button href="#" class="btn btn-success" id="addLH" style="margin-bottom: 0px;margin-left: 5px">Ajout Frais Hors Forfait</button>*/
 /*                         </div>*/
 /* */
 /*                     </div>*/
@@ -1528,6 +1541,7 @@ class __TwigTemplate_e523bb8362471d8c8720ab32ffaeae6386d2de29f12ea3b0abad3f3c1fc
 /* */
 /*                         </div>*/
 /*                         {% set i = 1 %}*/
+/*                         <!-- Affichage des justificatifs déjà sauvegarder plus affichage du formulaire pour en sauvegarder des nouveaux -->*/
 /*                         <div class="panel-body" style="max-height: 230px;min-height: 230px; overflow-y:scroll;">*/
 /*                             <div id="toutJ" URL-prototype="{{ form_widget(form1.justificatif.vars.prototype.File)|e('html_attr')}}">*/
 /*                                 {% for UneLigne in LesJustificatif %}*/

@@ -21,23 +21,24 @@ class __TwigTemplate_21186b69e080c62e7a557a36dd06f0797c53d3f22fc75429184b5cf9a43
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_043d82a0107518c77a44265907e2dee99bbbc16ebfcba542f4fc103cc8c86506 = $this->env->getExtension("native_profiler");
-        $__internal_043d82a0107518c77a44265907e2dee99bbbc16ebfcba542f4fc103cc8c86506->enter($__internal_043d82a0107518c77a44265907e2dee99bbbc16ebfcba542f4fc103cc8c86506_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TestBundle:Default:removeVisiteur.html.twig"));
+        $__internal_3042c63078f8493c2f16fe54208b1bfbaffb1fd3205e15e6fc83f8cb97446d19 = $this->env->getExtension("native_profiler");
+        $__internal_3042c63078f8493c2f16fe54208b1bfbaffb1fd3205e15e6fc83f8cb97446d19->enter($__internal_3042c63078f8493c2f16fe54208b1bfbaffb1fd3205e15e6fc83f8cb97446d19_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TestBundle:Default:removeVisiteur.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_043d82a0107518c77a44265907e2dee99bbbc16ebfcba542f4fc103cc8c86506->leave($__internal_043d82a0107518c77a44265907e2dee99bbbc16ebfcba542f4fc103cc8c86506_prof);
+        $__internal_3042c63078f8493c2f16fe54208b1bfbaffb1fd3205e15e6fc83f8cb97446d19->leave($__internal_3042c63078f8493c2f16fe54208b1bfbaffb1fd3205e15e6fc83f8cb97446d19_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_4d37c9820434f5cfbea8c5a0a93a67febf1620b5381e1d32104bb7fea86bf902 = $this->env->getExtension("native_profiler");
-        $__internal_4d37c9820434f5cfbea8c5a0a93a67febf1620b5381e1d32104bb7fea86bf902->enter($__internal_4d37c9820434f5cfbea8c5a0a93a67febf1620b5381e1d32104bb7fea86bf902_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_3b962779d409e46af7bb1cf6ef663a798ce4988ba781933db39697c805d6b723 = $this->env->getExtension("native_profiler");
+        $__internal_3b962779d409e46af7bb1cf6ef663a798ce4988ba781933db39697c805d6b723->enter($__internal_3b962779d409e46af7bb1cf6ef663a798ce4988ba781933db39697c805d6b723_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
-        echo "<div class=\"row\" style=\"margin-left: 0px;margin-right: 0px;margin-top: 50px;\">
+        echo "    <!--Page de suppression d'un utilisateur -->
+<div class=\"row\" style=\"margin-left: 0px;margin-right: 0px;margin-top: 50px;\">
     <div class=\"col-md-offset-3 col-lg-8\">
 
 
@@ -55,38 +56,38 @@ class __TwigTemplate_21186b69e080c62e7a557a36dd06f0797c53d3f22fc75429184b5cf9a43
         </thead>
         <tbody>
         ";
-        // line 20
+        // line 21
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["LesUtilisateurs"]) ? $context["LesUtilisateurs"] : $this->getContext($context, "LesUtilisateurs")));
         foreach ($context['_seq'] as $context["_key"] => $context["UnUtilisateur"]) {
-            // line 21
+            // line 22
             echo "        <tr>
             <td>";
-            // line 22
+            // line 23
             echo twig_escape_filter($this->env, $this->getAttribute($context["UnUtilisateur"], "getID", array(), "method"), "html", null, true);
             echo "</td>
             <td>";
-            // line 23
+            // line 24
             echo twig_escape_filter($this->env, $this->getAttribute($context["UnUtilisateur"], "getUsername", array(), "method"), "html", null, true);
             echo "</td>
             <td>";
-            // line 24
+            // line 25
             echo twig_escape_filter($this->env, $this->getAttribute($context["UnUtilisateur"], "getNom", array(), "method"), "html", null, true);
             echo "</td>
             <td>";
-            // line 25
+            // line 26
             echo twig_escape_filter($this->env, $this->getAttribute($context["UnUtilisateur"], "getPrenom", array(), "method"), "html", null, true);
             echo "</td>
             ";
-            // line 26
-            $context["role"] = $this->getAttribute($context["UnUtilisateur"], "getroles", array(), "method");
             // line 27
+            $context["role"] = $this->getAttribute($context["UnUtilisateur"], "getroles", array(), "method");
+            // line 28
             echo "            <td>";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["role"]) ? $context["role"] : $this->getContext($context, "role")), 0, array(), "array"), "html", null, true);
             echo "</td>
             <td style=\"text-align: center\"><form name=\"Utilisateur\" method=\"post\">
                     <input type=\"hidden\" name=\"id\" id=\"id\" value=\"";
-            // line 29
+            // line 30
             echo twig_escape_filter($this->env, $this->getAttribute($context["UnUtilisateur"], "getID", array(), "method"), "html", null, true);
             echo "\">
                     <input type=\"submit\" value=\"Supprimer\" class=\"btn btn-danger\">
@@ -97,7 +98,7 @@ class __TwigTemplate_21186b69e080c62e7a557a36dd06f0797c53d3f22fc75429184b5cf9a43
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['UnUtilisateur'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 34
+        // line 35
         echo "        </tbody>
     </table>
 
@@ -105,7 +106,7 @@ class __TwigTemplate_21186b69e080c62e7a557a36dd06f0797c53d3f22fc75429184b5cf9a43
     </div>
 ";
         
-        $__internal_4d37c9820434f5cfbea8c5a0a93a67febf1620b5381e1d32104bb7fea86bf902->leave($__internal_4d37c9820434f5cfbea8c5a0a93a67febf1620b5381e1d32104bb7fea86bf902_prof);
+        $__internal_3b962779d409e46af7bb1cf6ef663a798ce4988ba781933db39697c805d6b723->leave($__internal_3b962779d409e46af7bb1cf6ef663a798ce4988ba781933db39697c805d6b723_prof);
 
     }
 
@@ -121,11 +122,12 @@ class __TwigTemplate_21186b69e080c62e7a557a36dd06f0797c53d3f22fc75429184b5cf9a43
 
     public function getDebugInfo()
     {
-        return array (  101 => 34,  90 => 29,  84 => 27,  82 => 26,  78 => 25,  74 => 24,  70 => 23,  66 => 22,  63 => 21,  59 => 20,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  102 => 35,  91 => 30,  85 => 28,  83 => 27,  79 => 26,  75 => 25,  71 => 24,  67 => 23,  64 => 22,  60 => 21,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends 'TestBundle::layout.html.twig' %}*/
 /* {% block body %}*/
+/*     <!--Page de suppression d'un utilisateur -->*/
 /* <div class="row" style="margin-left: 0px;margin-right: 0px;margin-top: 50px;">*/
 /*     <div class="col-md-offset-3 col-lg-8">*/
 /* */
