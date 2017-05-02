@@ -34,11 +34,18 @@ class PostController extends Controller
 
             //Si les deux mdp corresponde on récupère l'id de l'utilisateur
             if($success){
+                //On vérifie que la personne qui se connecte soit bien un utilisateur et non un comptable
+                if (in_array("ROLE_UTILISATEUR", $User->getroles())){
+
 
                 $token = new UsernamePasswordToken($User, $User->getPassword(), 'main', $User->getRoles());
                 $context = $this->get('security.token_storage');
                 $context->setToken($token);
                 $message = $User->getId();
+            }else{
+                $success = false;
+                 $message = "Connexion refusee, accès réservé aux utilisateurs";
+            }
             }else{
                 $message = "Connexion refusee";
 
@@ -81,13 +88,18 @@ class PostController extends Controller
 
     //Si il existe au moins une fiche on va toute les parcourir afin de récupéré leur état, date, et id pour les renvoyer dans le JSON
     if ($LesFiches){
+        if (count($LesFiches) > 0){
     foreach ($LesFiches as $uneFiche) {
         $LaFiche = array('ID'=>$uneFiche->getID(),
             'etat'=>$uneFiche->getetat()->getid(),
             'Date'=>$uneFiche->getMois()->format('m-Y'));
         $Fiche[] = $LaFiche;
-    }
+        }
     $success = true;
+    }else{
+        $message = "Aucune fiche n'a été trouvé";
+    }
+    
     }else{
         $message = "Aucune fiche n'a été trouvé";
     }

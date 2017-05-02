@@ -64,3 +64,12 @@ ec92d1,::1,POST,http://localhost/appliFrais/web/comptable/consulter,1493568865,,
 132254,::1,GET,http://localhost/appliFrais/web/comptable/valider/15/18,1493569023,4bb218,200
 4bb218,::1,GET,http://localhost/appliFrais/web/comptable/valider/15/18,1493569023,,500
 dd6290,::1,GET,http://localhost/appliFrais/web/comptable/valider/15/18,1493569046,,200
+817712,::1,GET,http://localhost/appliFrais/web/comptable/valider/15/18,1493570575,3daadb,200
+3daadb,::1,GET,http://localhost/appliFrais/web/comptable/valider/15/18,1493570575,,500
+cd665c,::1,GET,http://localhost/appliFrais/web/api/connect?Username=user1&password=test,1493738307,,200
+5f9f6a,::1,GET,http://localhost/appliFrais/web/api/connect?Username=cpt1&password=test,1493738318,,200
+6faa86,::1,GET,http://localhost/appliFrais/web/api/connect?Username=cpt1&password=test,1493738382,,200
+1b4a68,::1,GET,http://localhost/appliFrais/web/api/listefiche&ID=16,1493738502,108b9a,200
+108b9a,::1,GET,http://localhost/appliFrais/web/api/listefiche&ID=16,1493738502,,404
+8c888f,::1,GET,http://localhost/appliFrais/web/api/listefiche?ID=16,1493738518,,200
+3205e7,::1,GET,http://localhost/appliFrais/web/api/listefiche?ID=16,1493738645,,200
