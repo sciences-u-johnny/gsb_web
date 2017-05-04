@@ -18,8 +18,8 @@ class __TwigTemplate_ddce7be50677e86b64d215d317fe4b215875796ffe4b364c582ec935987
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_33dde7526b99036560cd7758ff860c394b97baef64f8034b8840ad77eb2f5650 = $this->env->getExtension("native_profiler");
-        $__internal_33dde7526b99036560cd7758ff860c394b97baef64f8034b8840ad77eb2f5650->enter($__internal_33dde7526b99036560cd7758ff860c394b97baef64f8034b8840ad77eb2f5650_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TestBundle::layout.html.twig"));
+        $__internal_ff8d90d99e64f42bd8f6656000e5bbb9568159fdb4d365e0e6f5a2d6c35bbd78 = $this->env->getExtension("native_profiler");
+        $__internal_ff8d90d99e64f42bd8f6656000e5bbb9568159fdb4d365e0e6f5a2d6c35bbd78->enter($__internal_ff8d90d99e64f42bd8f6656000e5bbb9568159fdb4d365e0e6f5a2d6c35bbd78_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TestBundle::layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -119,7 +119,7 @@ class __TwigTemplate_ddce7be50677e86b64d215d317fe4b215875796ffe4b364c582ec935987
                                 <li id=\"liD\"><a style=\"border-color: transparent\" class=\"btn btn-lg \" href=\"";
         // line 40
         echo $this->env->getExtension('routing')->getPath("user_logout");
-        echo "\">Deconnection</a></li>
+        echo "\">Déconnexion</a></li>
 
                            </ul>
                               </div>
@@ -137,41 +137,41 @@ class __TwigTemplate_ddce7be50677e86b64d215d317fe4b215875796ffe4b364c582ec935987
 </html>
 ";
         
-        $__internal_33dde7526b99036560cd7758ff860c394b97baef64f8034b8840ad77eb2f5650->leave($__internal_33dde7526b99036560cd7758ff860c394b97baef64f8034b8840ad77eb2f5650_prof);
+        $__internal_ff8d90d99e64f42bd8f6656000e5bbb9568159fdb4d365e0e6f5a2d6c35bbd78->leave($__internal_ff8d90d99e64f42bd8f6656000e5bbb9568159fdb4d365e0e6f5a2d6c35bbd78_prof);
 
     }
 
     // line 6
     public function block_title($context, array $blocks = array())
     {
-        $__internal_c2ebb56d27563b123db3500870e06ee28f47b280977b4ed2c0fc28dc9a822159 = $this->env->getExtension("native_profiler");
-        $__internal_c2ebb56d27563b123db3500870e06ee28f47b280977b4ed2c0fc28dc9a822159->enter($__internal_c2ebb56d27563b123db3500870e06ee28f47b280977b4ed2c0fc28dc9a822159_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_c3b92289ac68c0965234d3562ef9b90525e43648ebdacd8f55a982ff398a9005 = $this->env->getExtension("native_profiler");
+        $__internal_c3b92289ac68c0965234d3562ef9b90525e43648ebdacd8f55a982ff398a9005->enter($__internal_c3b92289ac68c0965234d3562ef9b90525e43648ebdacd8f55a982ff398a9005_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Welcome!";
         
-        $__internal_c2ebb56d27563b123db3500870e06ee28f47b280977b4ed2c0fc28dc9a822159->leave($__internal_c2ebb56d27563b123db3500870e06ee28f47b280977b4ed2c0fc28dc9a822159_prof);
+        $__internal_c3b92289ac68c0965234d3562ef9b90525e43648ebdacd8f55a982ff398a9005->leave($__internal_c3b92289ac68c0965234d3562ef9b90525e43648ebdacd8f55a982ff398a9005_prof);
 
     }
 
     // line 7
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_a7ab4df73c2f11fe54188a0fd7f0ee899d3ad6beb198a91f3386b2cb5be9dbc2 = $this->env->getExtension("native_profiler");
-        $__internal_a7ab4df73c2f11fe54188a0fd7f0ee899d3ad6beb198a91f3386b2cb5be9dbc2->enter($__internal_a7ab4df73c2f11fe54188a0fd7f0ee899d3ad6beb198a91f3386b2cb5be9dbc2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_dda8b91676f2dd77b5c997106b11d06f0cf25698106d1bc86e93460b6c1c801a = $this->env->getExtension("native_profiler");
+        $__internal_dda8b91676f2dd77b5c997106b11d06f0cf25698106d1bc86e93460b6c1c801a->enter($__internal_dda8b91676f2dd77b5c997106b11d06f0cf25698106d1bc86e93460b6c1c801a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         
-        $__internal_a7ab4df73c2f11fe54188a0fd7f0ee899d3ad6beb198a91f3386b2cb5be9dbc2->leave($__internal_a7ab4df73c2f11fe54188a0fd7f0ee899d3ad6beb198a91f3386b2cb5be9dbc2_prof);
+        $__internal_dda8b91676f2dd77b5c997106b11d06f0cf25698106d1bc86e93460b6c1c801a->leave($__internal_dda8b91676f2dd77b5c997106b11d06f0cf25698106d1bc86e93460b6c1c801a_prof);
 
     }
 
     // line 49
     public function block_body($context, array $blocks = array())
     {
-        $__internal_f59e0deb944a80fb58701a5a715f032a7ddb28171e3d38f3a93530096a305773 = $this->env->getExtension("native_profiler");
-        $__internal_f59e0deb944a80fb58701a5a715f032a7ddb28171e3d38f3a93530096a305773->enter($__internal_f59e0deb944a80fb58701a5a715f032a7ddb28171e3d38f3a93530096a305773_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_8623daee6293863b47c64b6a206d1f405152bb0d85b84f5a9a89487313d6839e = $this->env->getExtension("native_profiler");
+        $__internal_8623daee6293863b47c64b6a206d1f405152bb0d85b84f5a9a89487313d6839e->enter($__internal_8623daee6293863b47c64b6a206d1f405152bb0d85b84f5a9a89487313d6839e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_f59e0deb944a80fb58701a5a715f032a7ddb28171e3d38f3a93530096a305773->leave($__internal_f59e0deb944a80fb58701a5a715f032a7ddb28171e3d38f3a93530096a305773_prof);
+        $__internal_8623daee6293863b47c64b6a206d1f405152bb0d85b84f5a9a89487313d6839e->leave($__internal_8623daee6293863b47c64b6a206d1f405152bb0d85b84f5a9a89487313d6839e_prof);
 
     }
 
@@ -229,7 +229,7 @@ class __TwigTemplate_ddce7be50677e86b64d215d317fe4b215875796ffe4b364c582ec935987
 /*                            <li id="liU"><a style="border-color: transparent" class="btn btn-lg btn-block" href="{{ path('test_removeVisiteur') }}">Supprimer User</a></li>*/
 /*                        {% endif %}*/
 /* */
-/*                                 <li id="liD"><a style="border-color: transparent" class="btn btn-lg " href="{{ path('user_logout') }}">Deconnection</a></li>*/
+/*                                 <li id="liD"><a style="border-color: transparent" class="btn btn-lg " href="{{ path('user_logout') }}">Déconnexion</a></li>*/
 /* */
 /*                            </ul>*/
 /*                               </div>*/

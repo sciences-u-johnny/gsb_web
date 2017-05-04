@@ -73,3 +73,8 @@ cd665c,::1,GET,http://localhost/appliFrais/web/api/connect?Username=user1&passwo
 108b9a,::1,GET,http://localhost/appliFrais/web/api/listefiche&ID=16,1493738502,,404
 8c888f,::1,GET,http://localhost/appliFrais/web/api/listefiche?ID=16,1493738518,,200
 3205e7,::1,GET,http://localhost/appliFrais/web/api/listefiche?ID=16,1493738645,,200
+7af42f,127.0.0.1,GET,http://localhost/appliFrais/web/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DFOSUserBundle%253ASecurity%253Alogin,1493886400,9cfb0f,200
+9cfb0f,127.0.0.1,GET,http://localhost/appliFrais/web/,1493886400,,200
+ef9ef3,::1,POST,http://localhost/appliFrais/web/login_check,1493886412,,302
+d6d27b,::1,GET,http://localhost/appliFrais/web/acceuil,1493886415,,302
+c6a5c2,::1,GET,http://localhost/appliFrais/web/user/renseigner,1493886421,,200
