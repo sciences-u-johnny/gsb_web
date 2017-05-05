@@ -27,7 +27,7 @@ class LigneForfaisType extends AbstractType
                 'class' => FraisForfais::class,
                 'choice_label' => 'id',
             ))
-            ->add('quantite')
+            ->add('quantite',IntegerType::class,array('attr' => array ('placeholder' => "Quantite")))
 
 
             ->add('date',DateType::class,array(

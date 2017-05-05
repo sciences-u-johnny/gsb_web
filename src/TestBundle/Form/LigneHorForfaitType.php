@@ -5,7 +5,7 @@ namespace TestBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
-use Symfony\Component\Form\Extension\Core\Type\NumberType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -24,8 +24,8 @@ class LigneHorForfaitType extends AbstractType
                     'year'=> 'Année','month'=>'Mois','day'=>'Jour'
                 ),
             ))
-            ->add('montant')
-            ->add('libelle')
+            ->add('montant',IntegerType::class,array('attr' => array ('placeholder' => "Montant")))
+            ->add('libelle',TextType::class,array('attr' => array ('placeholder' => "Description")))
             ->add('valide')
         ;
 

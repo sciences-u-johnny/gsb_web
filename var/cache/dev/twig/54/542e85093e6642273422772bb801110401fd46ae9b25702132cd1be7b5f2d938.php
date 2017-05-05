@@ -15,8 +15,8 @@ class __TwigTemplate_0c72d9eb689031d850689a384e0dadd8fa8e75e88bb76870a9836746455
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_df5f6c8b347e6d6906b01ad869f709bd94c6df3573be45816403430914822e7c = $this->env->getExtension("native_profiler");
-        $__internal_df5f6c8b347e6d6906b01ad869f709bd94c6df3573be45816403430914822e7c->enter($__internal_df5f6c8b347e6d6906b01ad869f709bd94c6df3573be45816403430914822e7c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Security/login_content.html.twig"));
+        $__internal_f3fb1ea76efbf23b3bbcb15043b12385677c17a20f93b2af55fac45b38b21593 = $this->env->getExtension("native_profiler");
+        $__internal_f3fb1ea76efbf23b3bbcb15043b12385677c17a20f93b2af55fac45b38b21593->enter($__internal_f3fb1ea76efbf23b3bbcb15043b12385677c17a20f93b2af55fac45b38b21593_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Security/login_content.html.twig"));
 
         // line 1
         echo "<link rel=\"stylesheet\" href=\"";
@@ -89,14 +89,14 @@ class __TwigTemplate_0c72d9eb689031d850689a384e0dadd8fa8e75e88bb76870a9836746455
 
                 <br/>
 
-                <input type=\"submit\" class=\"btn btn-primary btn-lg btn-block\"  id=\"_submit\" name=\"_submit\" value=\"Connection\" />
+                <input type=\"submit\" class=\"btn btn-primary btn-lg btn-block\"  id=\"_submit\" name=\"_submit\" value=\"Connexion\" />
 
             </form>
         </div>
     </div>
 </div>";
         
-        $__internal_df5f6c8b347e6d6906b01ad869f709bd94c6df3573be45816403430914822e7c->leave($__internal_df5f6c8b347e6d6906b01ad869f709bd94c6df3573be45816403430914822e7c_prof);
+        $__internal_f3fb1ea76efbf23b3bbcb15043b12385677c17a20f93b2af55fac45b38b21593->leave($__internal_f3fb1ea76efbf23b3bbcb15043b12385677c17a20f93b2af55fac45b38b21593_prof);
 
     }
 
@@ -151,7 +151,7 @@ class __TwigTemplate_0c72d9eb689031d850689a384e0dadd8fa8e75e88bb76870a9836746455
 /* */
 /*                 <br/>*/
 /* */
-/*                 <input type="submit" class="btn btn-primary btn-lg btn-block"  id="_submit" name="_submit" value="Connection" />*/
+/*                 <input type="submit" class="btn btn-primary btn-lg btn-block"  id="_submit" name="_submit" value="Connexion" />*/
 /* */
 /*             </form>*/
 /*         </div>*/
