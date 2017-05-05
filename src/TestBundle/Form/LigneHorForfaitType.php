@@ -24,7 +24,7 @@ class LigneHorForfaitType extends AbstractType
                     'year'=> 'Année','month'=>'Mois','day'=>'Jour'
                 ),
             ))
-            ->add('montant',IntegerType::class,array('attr' => array ('placeholder' => "Montant")))
+            ->add('montant',TextType::class,array('attr' => array ('placeholder' => "Montant")))
             ->add('libelle',TextType::class,array('attr' => array ('placeholder' => "Description")))
             ->add('valide')
         ;
